@@ -1,0 +1,200 @@
+<html>
+<head>
+<title>JavaScript</title>
+<script language="JavaScript">function abrir(desktopURL){var desktop = window.open( desktopURL, "_blank", "toolbar=no,location=no,status=yes,menubar=no,resizable=yes,scrollbars=yes,width=510,height=400");
+}
+function ejemploPrompt() {
+var respuesta = prompt("¿Cómo te llamas?", "");
+      if (respuesta)
+      alert("Es un placer, " + respuesta);
+}
+function marquesina(texto){
+document.write("<b><marquee>" + texto + "</marquee></b>");
+}
+function multiplicar(valor1,valor2){
+document.write(valor1*valor2);
+}
+</script>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<center>
+<h3><font color="blue">Tu sitio interactivo</h3></font>
+</center>
+Llegó la hora de poner un poco de acción a tu página. A lo largo de esta guia se dijo que 
+<b>JavaScript puede dar vida a tu sitio</b>, y ya conoces lo necesario para alcanzar ese objetivo. 
+Pero aún no vimos nada que pruebe esa afirmación. Pues bien, hoy descubrirás por qué decimos 
+que JavaScript es el primer lenguaje "<b>interactivo</b>".
+<br><br> 
+Pero, tal vez ya te estes preguntando: <b>¿qué es la interactividad?</b>. Es una palabra muy 
+usada y por lo tanto, algo "gastada". Puedes buscar en miles de diccionarios una definición 
+exacta, pero la mejor respuesta la encontrarás al hacer click 
+<a onClick="alert('Esto es interactividad')"><font color=blue style=cursor:hand><u>aquí</u></font></a>. 
+<br><br>
+La idea de interactividad remite a un diálogo entre el usuario y -en el caso de Internet- la 
+página. A una respuesta variable del sitio en cuestión ante cierta conducta del usuario. Por 
+ejemplo, cuando completas un formulario, dejas un mensaje o juegas con una imagen estás 
+<b>dialogando</b> con el sitio, sin ser un mero expectador de su contenido.
+<br><br>
+JavaScript te ayudará a contactarte con los navegantes de tu página y hasta descubrir quiénes 
+son. Y si no lo crees, <b>pulsa el siguiente botón</b>.
+<br><br>
+<form>
+<center>
+<input type="button" name="Boton1" value="Quiero Conocerte" onClick="ejemploPrompt()">
+</center>
+</form>
+<br>
+Para hacer estos trucos no se usó la magia, sino la herramienta más potente de Javascript: las 
+<b>funciones</b>.Continúa leyendo para saber lo que las funciones te permitirán lograr.
+<br><br>
+<center>
+<h3><font color="blue"><a name="funcion">¿Qué es una función?</h3></font>
+</center>
+Son el "<b>alma</b>" de JavaScript y resultan indispensables para crear tareas que te acerquen 
+a los visitantes de tu site. Las funciones son trozos de código que <b>reúnen un conjunto de 
+acciones</b>. Sí deseas que la página ejecute ciertas operaciones, como las de los ejemplos 
+anteriores, debes "<b>enmarcarlas</b>" dentro de una función para que se lleven a cabo.
+<br><br>
+Por ejemplo, acciones como "<b>correr</b>", "<b>saltar</b>" y "<b>levantar pesas</b>", por sí
+solas, carecen de sentido si no están comprendidas dentro de la función "<b>hacer ejercicio</b>".
+Con JavaScript pasa lo mismo, y las funciones sirven para dar orden y contexto a un conjunto de 
+tareas.
+<br><br>
+Como los demás códigos del lenguaje, las funciones deben ubicarse dentro de las etiquetas 
+<b>&ltSCRIPT></b>, con preferencia en el encabezado del documento (<b>&ltHEAD></b>) para que 
+el browser las tenga presentes desde el momento en que carga la página. Y tienen una sintaxis 
+especial:
+<br><br>
+<b>
+<font color=red>function</font> nombre_de_la_función<br>
+<font color=blue>(argumentos)<font color=00ff00>{</font>código de la función;<font color=00ff00>
+}</font></font>
+</b>
+<br><br>
+La función se declara con la palabra <font color=red><b>function</b></font> y recibe un <b>nombre</b>, 
+que debe comenzar con una <b>letra o guión bajo</b> (_), y puede tener números entre el resto 
+de lo caracteres pero <b>no espacios</b>. 
+<br><br>
+Los <font color=blue><b>argumentos</b></font> actúan como <b>variables</b> que <b>almacenarán las 
+acciones</b> o <b>partes</b> que componen la función. Según la cantidad de tareas, puede o 
+no haber argumentos, y en caso de requerir varios hay que separarlos por <b>comas</b>. Se 
+les puede poner cualquier nombre, siempre que <b>no comience con un número</b>, por ejemplo:
+<br><br>
+<b>
+function prueba(parte1, parte2, parte3){
+</b>
+<br><br>
+Por último, todo lo que hace la función se escribe entre <b>llaves</b> (<font color=00ff00><b>{</b>
+</font> y<font color=00ff00> <b>}</b></font>), y así se cierra el código. 
+
+Con esto se define la función, pero no se la activa. Para ello, y desde cualquier lugar de la 
+página, hay que "<b>llamarla</b>" escribiendo su nombre junto con los datos que usarán los 
+argumentos encerrados entre paréntesis, por ejemplo:
+<br><br>
+<b>
+prueba(50, 100, 25)
+</b>
+<br><br>
+<center>
+<h3><font color="blue"><a name="poniendose">Poniéndose en función</h3></font>
+</center>
+Si te quedas sólo con la teoría, las funciones parecen algo complejo. Mejor ejercita esa 
+sintaxis para despejar dudas con este ejemplo, que mostrará en la página un mensaje animado 
+estilo <b>marquesina</b>:
+<br><br>
+<center>
+<img src="marquee.jpg"><br>
+<a onclick="window.open('imagen3.htm','popup','width=550 height=315')">
+<font face=Fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a>
+</center>
+<br>
+<center>
+En tu navegador, el ejemplo se verá así:<br><br>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td bgcolor="ECECFF" align="center" width=400>
+<font face=verdana size=2><script>marquesina("Esto fue hecho con una función")</script></td>
+</tr>
+</table>
+</center>
+<br><br>
+Aunque podríamos lograr lo mismo usando sólo HTML, este script te muestra cómo lograr una 
+función con elementos que ya te resultarán familiares. 
+<br><br>
+Primero, define la función <b>marquesina</b> con un argumento llamado <b>texto</b>, que 
+contendrá el mensaje a mostrar. Luego, codifica la tarea de la función haciendo que escriba 
+en la página (<b>document.write</b>) el contenido del argumento (<b>texto</b>) con el efecto 
+HTML que hace mover el mensaje (etiqueta <b>&ltMARQUEE></b>).
+<br><br>
+Por ultimo hay que "<b>llamar</b>" a la función para que ejecute su tarea al final de la 
+oración escrita en el <BODY> del documento, y define cuál es el mensaje contenido por el 
+argumento, con la sentencia marquesina("Esto fue hecho con una función"). 
+<br><br>
+Notarás que la "<b>puesta en marcha</b>" de la función está encerrada entre nuevas etiquetas 
+<b>&ltSCRIPT></b>. Esto es necesario para que la "<b>llamada</b>" sea interpretada como parte 
+de una función y no como un texto más de la página. Pero más adelante verás que las funciones 
+pueden "<b>activarse</b>" sin necesidad de incluirlas entre esos "<b>tags</b>".
+<br><br>
+<center>
+<h3><font color="blue"><a name="unpaso">Un paso más allá</h3></font>
+</center>
+Ya lo leíste antes, la cantidad de argumentos de una función depende del número de operaciones 
+que realiza. En el siguiente ejemplo, verás cómo usar dos argumentos para resolver una operación 
+matemática:
+<br><br>
+<center>
+<img src="suma.jpg"><br>
+<a onclick="window.open('imagen4.htm','popup','width=350 height=370')">
+<font face=Fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a>
+</center>
+<br>
+<center>
+El resultado de la función es: <b>
+<script> multiplicar(2,5)</script></b>
+</center>
+<br><br>
+En este caso, se toman dos argumentos, se multiplican sus contenidos por medio del <b>operador</b> 
+matemático indicado (*). Para ver el resultado, se activa la función definiendo los valores con 
+los que se hará la multiplicación.
+<br><br>
+Ahora, llegarás un poco más lejos con un script que da prueba de esa 
+"<b>interacción con el usuario</b>" de la que hablamos al comienzo de la nota. Prueba este 
+ejemplo:
+<br><br>
+<b>Cliquea <a href="javascript:abrir('colores.htm')">aquí</a> y se desplegará una página.</b>
+Cuando esto suceda cliquea en cada palabra y observa lo que pasa.
+<br><br>
+Interesante, ¿no? Con algo así, tus visitantes pueden colorear tu sitio a su gusto. 
+Pero, ¿cómo funciona? Fíjate, es muy fácil: 
+<br><br>
+<center>
+<img src="colores.jpg"><br>
+<a onclick="window.open('imagen5.htm','popup','width=470 height=350')">
+<font face=Fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a>
+</center>
+<br>
+Nuestro script usa la propiedad <b>bgColor</b> del objeto <b>document</b> para cambiar la 
+tonalidad del fondo de la página activa, llamando a la función cuando presionas el link 
+correspondiente. Pero aqui también interviene esa palabra "<b>onClick</b>" que habrás visto 
+dentro del código HTML antes de cada link. 
+<br><br>
+¿Qué efecto tiene esa palabra? Bien: recuerda que Javascript <b>trabaja con objetos</b>. 
+Sobre cada objeto se pueden efectuar varios "<b>eventos</b>", como "<b>presionar</b>" un 
+botón o "<b>escribir</b>" en un cuadro de texto. En este ejemplo, se usa el evento onClick 
+que tiene todo vínculo para disparar la función que cambia el color de la hoja.
+<br><br>
+Más adelante, conocerás todos los "<b>eventos</b>" disponibles para enriquecer tu sitio. 
+Pero ahora es tiempo de que continúes practicando las funciones y sigas leyendo esta guia
+para que seas un maestro en JavaScript.
+<br><br>
+<center>
+<a href="deseo.htm">Objeto del deseo...</a>
+<br><br>
+<font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center> 
+
+
+
+

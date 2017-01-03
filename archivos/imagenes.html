@@ -1,0 +1,81 @@
+<html>
+<font face=verdana>
+<h2><font color=blue>Imagenes</font></h2>
+<body background="fondo.jpg" bgproperties=fixed>
+Antes de empezar a decirte como se inserta una imagenen en tu pagina Web primero te enseñare como esta la puedes guardar en tu dicos duro.<br><br>
+1.Hacer click con el botón derecho sobre la imagen.<br>
+2.Elija "guardar como..." (save as...) del menú archivo <br> 
+3.Darle la dirección de el directorio donde lo quiere guardar y salve.<br><br>
+Las imagenes son un elemento muy importante para nuestra pagina WEB, ya que la adornan y la enbellecen, pero hay dos aspectos que debemos tener en cuenta: <br>
+La primera es que el tiempo de descarga de una imagen es lento, lo cual quiere de cir que si llenamos nuestra pagina de imagenes va a demorar mucho en descargarse completamente lo cual puede hacer que la persona si salga sin llegar a ver el contenido de esta. Es por esto que se dice que las imágenes en la Web son un arma de doble filo. Una buena imagen puede llamar la atención y ser de gran utilidad para ilustrar o para atraer visitantes, pero una imagen mala o muy pesada (es decir, un archivo de muchos kilobytes de tamaño) puede espantar hasta al más voluntarioso de los navegantes.
+<br><br>
+La segunda es que el visitante haya deshabilitado la carga automática de imágenes lo cual  podría ser muy perjudicial si hemos escogido imagenes para explicacion de algo, o como link,etc.<br><br> 
+En cuanto a las imagenes existen dos formatos fundamentales que nos proporcionan el mejor uso:  GIF (llamado así por sus siglas en inglés, Graphic Interchange Format) y JPEG (iniciales del grupo que lo desarrolló, el Joint Photograph Expert Group).<br><br>
+El formato GIF fue creado por la empresa CompuServe, para que sus usuarios pudieran intercambiar imágenes entre sí a través de la Red. Para almacenar la información, el GIF utiliza 8 bits (unidades de información) por cada pixel . Como cada bit tiene dos estados posibles (uno o cero), la imagen puede desplegar hasta 256 colores. Como la mayoría de los monitores tienen capacidad para representar por lo menos 256 colores en pantalla , el formato GIF funciona de manera razonable.<br><br>
+
+Por otro lado, el formato JPG fue creado especialmente para almacenar imágenes con calidad fotográfica. Cumple con su tarea sacrificando calidad de imagen a cambio de una paleta de colores más extensa. Utiliza 24 bits por pixel, lo que le permite albergar hasta 16.777.216 colores en cada imagen. A diferencia de lo que se puede llegar a pensar, el jpg no necesariamente es más pesados, ya que posee un mecanismo de compresión que reduce el tamaño del archivo mediante cierta pérdida en la información. <br><br>
+
+Como regla general, conviene utilizar archivos con extensión JPG cuando la imagen a insertar sea una foto. Si, en cambio, nuestra imagen contiene un logo o un dibujo de pocos colores o con grandes superficies cubiertas por colores parejos, es conveniente utilizar un GIF.<br><br>
+<h2><font color=blue>Insertar una imagenes</font></h2>
+La etiqueta utilizada para agregar im&aacute;genes a una p&aacute;gina Web es <B>&lt;IMG&gt;</B> y va acompa&ntilde;ada de un atributo fundamental "<B>SCR</B>", que indica la ruta donde se encuentra el archivo que contiene la imagen a insertar. </P>
+<P>Es decir:</P>
+<B><P>&lt;IMG SRC="lugar donde guardo la imagen"&gt;</P>
+</B><P>Supongamos que tengo la imagen cara.gif, que est&aacute; presente en el mismo directorio donde est&aacute; la p&aacute;gina y que la quiero insertar. La etiqueta apropiada ser&iacute;a:</P>
+<B><P>&lt;IMG SRC="construction.gif"&gt;</P>
+</B><P>Y el usuario ver&aacute; en el browser:</P>
+<P><IMG SRC="construction.gif"></P>
+<FONT FACE COLOR="blue"><B><P>EL ATRIBUTO ALT</P></B></FONT>
+<P>Otro atributo importante  de la etiqueta <B>&lt;IMG&gt;</B> es "<B>ALT</B>". Este atributo permite complementar la imagen con un texto alternativo, utilizado principalmente para aquellos browsers que no permiten mostrar im&aacute;genes, ya sea porque son navegadores que s&oacute;lo soportan texto (como Lynx), porque el usuario tiene desactivada esta opci&oacute;n o porque se produjo un accidente que impidi&oacute; la llegada del gr&aacute;fico a la PC del usuario. El texto aparecer&aacute; en el espacio correspondiente a la imagen, y tambi&eacute;n cuando el usuario pase el mouse por arriba de la imagen, incluso si &eacute;sta baj&oacute; normalmente a la computadora del navegante.</P>
+<P>Ejemplo:</P>
+<B><P>&lt;IMG SRC="construction.gif" ALT= "construction"&gt;</P>
+</B><P>El usuario ver&aacute; (pasar el mouse arriba del texto):</P>
+<P><IMG SRC="construction.gif" ALT="Construction"></P>
+<P>&nbsp;</P>
+<FONT FACE COLOR="blue"><H3><P>Im&aacute;genes como enlaces sin borde</P></H3>
+</B></FONT><P>Otra caracter&iacute;stica interesante de las im&aacute;genes insertadas es que permiten ser utilizadas como hiperv&iacute;nculos. Para esto, es necesario crear un enlace  y en vez de encerrar el texto dentro la etiqueta <B>&lt;A&gt;</B> hay que encerrar una imagen, pero la desventaja de esto
+(para algunos) es que muestra un borde alrededor de la imágen, asi que veamos como eliminarlo.</P>
+<P>Ejemplo:</P>
+<B><P>&lt;A HREF="http://www.geocities.com/hazeksite"&gt; &lt;img src="HazekStar.gif" border="0" alt="Click aqui para ver lo que puse"&gt; &lt;/A&gt;</P>
+</B><P>Resultado: </P>
+<P><A HREF="http://www.geocities.com/hazeksite"><IMG SRC="HazekStar.gif" border="0" ALT="Click aqui para ver lo que puse"></A></P>
+<P>Tambien podemos enlacer una imagen con nuestra direccion de correo electronico.</P>
+<P>Ejemplo:</P>
+<B><P>&lt;A HREF=mailto:hazek_dk@hotmail.com ;img src="correo.gif" <br>alt="Click aqui para mandarme un mail" &gt</P>
+</B><P>El usuario ver&aacute;</P>
+<P><A HREF="Hazek"><IMG SRC="correo.gif" BORDER=0 ALT="Click aqui para mandarme un mail"></A></P>
+<br><br>
+<B><FONT color=blue>BORDES:<br><br> </FONT></B> El atributo utilizado para establecer un borde en una   imagen es BORDER= #, dónde # es un número de 0 a 99. </P>
+<P>Ejemplo de una imagen sin especificar borde</P>
+<P><B>&lt;img  scr="ojo.gif"&gt;</B></P>
+<P><IMG height=95 src="ojo.gif" width=95></P>
+
+ <P><BR></P></TD>
+ <TD vAlign=top width=20>&nbsp;</TD>
+ <TD vAlign=top width=118>
+<b>Ejemplo de imágenes con el atributo BORDER</b></P>
+ <P>&lt;border=5  img scr="ojo.gif"&gt</P> <P><IMG border=5 height=95 src="ojo.gif" width=95></P> <P>O sino</P><P>&lt;border=15 img scr="ojo.gif"&gt;</P><P><IMG alt="Globo terráqueo" border=15 height=95 src="ojo.gif" width=95></P><P>Cada vez que utilizamos una imagen para establecer un 
+hipervínculo, de manera automática el browser agrega un borde a la imagen. Si queremos eliminarlo, deberemos indicarlo con 
+el atributo <B>BORDER=0</B>.</P><P>
+<B><FONT color=blue size=3>Alineando la imagen</font></B></P><P>El atributo utilizado para alinear una imagen es  <B>ALIGN</B>
+<P>Si quiere insertar una imagen a la izquierda de la pantalla</P>
+<P><B>&lt;img  align=left src="laguna.gif"&gt;</B></P>
+<P><IMG  src="laguna.gif" ></P>
+<P>Si prefiero insertarla a la derecha:</P>
+<P><B>&lt;img align=right src="laguna.gif"&gt;</B></P>
+<P><IMG align=right SRC="laguna.gif" ></P><BR>
+ <P>&nbsp;</P> <P>&nbsp;</P><P>Como todavía hay browsers que no soportan la etiqueta 
+ <B>&lt;img align=center&gt;</B>, para centrar una imagen hay que recurrir a un pequeño truco: primero centramos un párrafo 
+ (tengamos o no texto) y luego insertar la imagen</P>
+<P>Para centrar una imagen, entonces:</P><P><B>&lt;P ALIGN=CENTER&gt; &lt;img src="laguna.gif"&gt; &lt;/P&gt;</B></P>
+<P align=center><P align=center><IMG align=middle src="laguna.gif"></CENTER><br><br>
+<font color=blue><b>Alinear el texto despues de la imagen</b></font><BR><BR>
+Para esto se utiliza el atributo ALIGN.Este es un parametro opcional usado para alinear la imagen respecto al texto que la acompaña en la misma linea convirtiendola en lo que se llama una imagen flotante. Hay dos tipos basicos de alineacion:<BR><BR>
+Vertical:<BR>
+TOP(ARRIBA), MIDDLE(MEDIO) y BOTTOM(ABAJO).El valor que utiliza este atributo por defecto es BOTTOM. Este atributo tambien es utilizado cuando queremos insertar dos imagenes en una misma linea.<BR><BR> 
+Horizontal:<BR>
+LEFT(IZQUIERDO), RIGHT(DERECHO), TEXTTOP, ABSMIDDLE, BASELINE y ABSBOTTOM<BR><BR>
+EJEMPLO:<BR><BR>
+<b><font color=blue>Atributos  HEIGHT(altura) y WIDTH  (ancho)</font></b><br><br> Permiten cambiar el tamaño de una imagen. Un ejemplo sin estos atributos</P><P>&LTIMG  SRC="zip.gif"&gt;</P> <P>El usuario verá:<br><br><IMG height=31 src="zip.gif" width=33></P> Debido a que este atributo falsea la imagen es logico que esta se distorcione</FONT></P><P>&lt;IMG SRC="zip.gif" ALIGN=LEFT WIDTH=75 HEIGTH=40&gt;</FONT></P><P><IMG height=75 src="zip.gif" width=75></FONT></P>
+<font face=verdana>
+<br><center><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center>
+ </font><HTML> 

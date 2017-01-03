@@ -1,0 +1,106 @@
+<HTML>
+<HEAD>
+<TITLE>MANUAL DE HTML</TITLE>
+</HEAD>
+<body background="fondo.jpg" bgproperties=fixed>
+<font face="verdana">
+<b> <h2><font color= "blue"> Otros TAGS</a></font></h2></b>
+Ademas de los anteriores existen otros tipos de tabs que se denominas, TABS secundarios, entre este grupo de tabs encontramos:<br><br>
+
+Negrita <b>&ltB&gt...&lt/B&gt</b> el texto encerrado entre ambas directivas aparece con un tipo de letra más gruesa.<br><br>
+
+Cursiva <b>&ltI&gt...&lt/I&gt</b> el  texto encerrado entre ambas directivas aparece con un tipo de letra inclinada hacia la derecha.<br><br>
+
+Subrayado<b> &ltU&gt...&lt/U&gt</b> el  texto encerrado  entre ambas directivas aparece subrayado con una línea horizontal.<br><br>
+
+Acronimos <b>&ltACRONYM&gt</b><br><br>
+
+Abreviaciones <b>&ltABBREV&gt</b><br><br>  
+
+Texto de Terminal <b>&ltTT&gt...lt/TT&gt</b> Tipo maquina de escribir<br><br>
+
+Subindice <b>&ltSUB&gt...&lt/SUB&gt</b><br><br>
+
+Superíndice<b>&ltSUP&gt...&lt/SUP&gt</b><br><br>
+
+<b>&ltCMD&gt</b>  es para señalar un nombre de comando de computadora. Poco usada.<br><br>
+
+salto de página. <b>&ltpage&gt </b><br><br>
+
+Negrita <b>&ltSTRONG&gt...&lt/STRONG&gt.</b><br><br>
+
+Enfatizado <b>&ltEM&gt...&lt/EM&gt </b>se indentifica con el estilo de cursiva.<br><br>
+
+Argumento o atributos <b>&ltARG&gt</b><br><br>  
+
+<b>&ltXMP&gt</b> este un un atributo muy interesante ya que nospermite ahorrarnos los caracteres especiales. escribe el texto o la palabra tal y cual como se escribio en el procesador de palabras.<br><br> 
+
+Cita <b>&ltCITE&gt...&lt/CITE&gt </b>se indentifica con el estilo de texto citado textualmente.<br><br>
+
+Dirección. <b>&ltaddress&gt ... &lt/address&gt</b><br><br>
+
+Texto de Terminal <b>&ltKBD&gt...&lt/KBD&gt</b><br><br>
+
+Código <b>&ltCODE&gt...&lt/CODE&gt </b>código que normalmente se emplea para representar un elemento HTML.<br><br>
+
+Definición <b>&ltDFN&gt...&lt/DFN&gt.</b><br><br>
+
+Ejemplo <b>&ltSAMP&gt...&lt/SAMP&gt.</b><br><br>
+
+Variable <b>&ltVAR&gt...&lt/VAR&gt.</b><br><br>
+
+Estos son todos los que yo conosco si tienes alguno mandamelo<br><br>
+
+A continuacion te voy a explicar dos etiquetas que son muy importantes, y agradables:<br><br>
+La primera es <b>&ltMARQUEE&gt...&lt/MARQUEE&gt</b>, Esta etiqueta se utiliza para insertar un texto movil.<br><br> 
+EJEMPLO:<br><br>
+&ltMARQUEE&gtEste es un texto movil&lt/MARQUEE&gt<br><br>
+El cual se vera asi:<br><br>
+<MARQUEE>Este es un texto movil</MARQUEE><br><br>
+Esto solo podra ser visualizado por los que tengan el Explorador 3.0 o superior.<br><br>
+Para resaltar más este efecto, puedemos incorporar un color de fondo con el atributo BGCOLOR.<br><br>
+&ltMARQUEE BGCOLOR=blue&gt ja-ja-ja-ja &lt/MARQUEE&gt<br><br>
+El cual se veria asi:<br><br>
+<MARQUEE BGCOLOR=blue> ja-ja-ja-ja </MARQUEE><br><br>
+Tambien puede ir acompañados de los atributos  HEIGHT (alto) y WIDTH (ancho).Estos deben ir seguido de un valor numerico el cual se mide en pixeles<br><br>
+&ltMARQUEE BGCOLOR=red HEIGHT=25 WIDTH=50%&gt cogelo&lt/MARQUEE&gt<br><br>
+Se veria asi:<br><br>
+<MARQUEE BGCOLOR=red HEIGHT=25 WIDTH=50%>David K</MARQUEE><br><br>
+ Tambien podemos controlar el numero de veces que queremos que salga el mensaje, y el sentido(de izquierda a derecha o al contrario), el primero se logra con el atributo LOOP, y el segundo con DIRECTION, el cual tiene dos valores RIGHT o LEFT, su valor por defecto es LEFT.<br><br> 
+EJEMPLO:<br><br>
+&ltMARQUEE LOOP=1  DIRECTION=RIGHT &gt Si no lo viste, actualiza la pagina y esta atento &lt/MARQUEE&gt<br><br>
+<MARQUEE LOOP=1  DIRECTION=RIGHT> Si no lo viste, actualiza la pagina y esta atendo</MARQUEE><br><br>
+Tambien puedes utilizar las etiquetas vistas anteriormente, es decir, pudes cambiarle el color a la letra, puedes ponerla en cursiva, etc.<br><br>
+EJEMPLO:<br><br>
+<MARQUEE ><font color=green> <i>ja-ja-ja-ja</i></font> </MARQUEE><br><br>
+La segunda etiqueta es parecida  a la anterior, solo que el texto encerrada comienza a parpadear, es propio del NETSCAPE.<br><br>
+EJEMPLO:<br><br>
+&ltBLINK&gtta-ta-ta-ta  &lt/BLINK&gt<br><br>
+<BLINK>ta-ta-ta-ta  </BLINK><br><br>
+Como estas etiquetas son propia de cada navegador, debes tener cuidado a la hora de utilizarlo porque no sabemos que navegador esta utilizando nuestro visitante, lo cual puede ser muy perjudicial para nuestra pagina.<br>
+Te aconsejo que si los vas a utilizar los coloques en la misma linea, con el objetivo de que si no reconoce el uno reconocera el otro.<br> 
+<p>
+•Otra marquesina muy util es la siguiente que es capaz de visualizarse en ambas versiones de Internet Explorer y
+Netscape, su funcion es rebotar en las pareredes de nuestra pagina web
+<p>
+&LTmarquee behavior="alternate">¿Como haz estado?&lt/marquee>
+<p>
+<marquee behavior="alternate">¿Como haz estado?</marquee>
+<p><br>
+•Otro tag muy bueno es esta que sirve para darle cierta velocidad a nuestra marquesina, el codigo es el sigueinte:
+<p>
+&ltmarquee scrollamount=50>Hola Amigo!&lt/marquee>
+<p>
+<marquee scrollamount=50>Hola Amigo!</marquee>
+<p>Dependiendo de la velocidad que queramos aplicar se le asignara un numero que va desde <b>1 a 100</b>.
+<p><br>
+•Este otro ejemplo sirve para darle un efecto de "<b>paradas</b>"
+<p>
+&ltmarquee scrolldelay=500 scrollamount=100>Hola Amigo!&lt/marquee>
+<p>
+<marquee scrolldelay=500 scrollamount=100>Hola Amigo!</marquee>
+<p>
+En ese ejemplo <b>scrolldelay</b> tiene un valor que es de <b>1 a 1000</b> donde 1 es la velocidad
+<b>maxima</b> y 1000 la velocidad <b>minima</b>.
+<p>
+<br><center><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center>

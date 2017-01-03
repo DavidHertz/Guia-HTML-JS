@@ -1,0 +1,156 @@
+<html>
+<body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana>
+<font color="blue" ><b>LISTAS</b></font><br><br>
+Existen tres tipos de listas: ordenadas, desordenadas y descriptivas.<br><br>
+<font color=blue><H3><A NAME="OL">1.Listas Ordenadas</H3></font></a>
+La listas ordenadas  empiezan por la directiva &ltOL&gt...&lt/OL&gt (Ordered List, lista ordenada),  entre las que se incluirán los elementos de la lista. Cada uno de los elementos irán precedidos de la directiva &ltLI&gt (List Item, artículo de la lista). <br><br>
+
+EJEMPLO:<br><br> 
+
+<P><TT>&lt;OL&gt; </TT></P>
+<UL>
+<P><TT>&lt;LI&gt;Primer elemento<BR>
+&lt;LI&gt;Segundo elemento<BR>
+&lt;LI&gt;Tercer elemento</TT></P>
+</UL>
+<P><BR>
+<TT>&lt;/OL&gt;</TT></P>
+<OL>
+<LI>Primer elemento</LI>
+<LI>Segundo elemento</LI>
+<LI>Tercer elemento</LI>
+</OL><br><br>
+<b>ATRIBUTOS:</b><br><br>
+ <b>START</b><br><br>
+Si no se especifica nada, los navegadores empiezan a numerar las listas a partir de 1. El atributo START permite comenzar la lista desde el valor que el diseñador prefiera.
+<br><br>Ejemplo:<br><br>
+&ltol start3&gt<br>
+&ltli> Este es el item 3<br> 
+&ltli> Este es el item 4<br>
+&ltli> Este es el item 5<br> 
+&lt/ol&gt <br><br>
+El cual se veria asi:<br><br>
+3.Este sería el ítem tres<br> 
+4.Este seria el item  cuatro<br>
+5.Este es el item cinco.<br> 
+<br><b> TYPE:</b><br><br>
+Si el browser no recibe ningún tipo de aclaración previa, comenzará creará listas numeradas desde el 1. Pero puede ocurrir que el diseñador prefiera ordenar una lista con letras o números romanos. Para esto hay que usar el atributo TYPE con su valor respectivo:<br><br> 
+A para ordenar por mayúsculas (A, B, C, D...). <br>
+a para minúsculas (a, b, c, d...). <br>
+I para números romanos en mayúsculas (I, II, III, IV...). <br>
+i para números romanos en minúsculas (i, ii, iii, iv...). <br>
+1 para la opción por defecto: números arábigos (1, 2, 3, 4...).<br> 
+Los atributos TYPE y START se pueden combinar. <br><br>
+EJEMPLO:<br><br>
+&ltol start=3 type="I"&gt<br>
+&ltli&gt 3 en romano<br>
+&ltli&gt 4 en romano<br>
+&ltli&gt e en romano<br>
+&lt/ol&gt<br><br> 
+El cual se veria asi:<br><br>
+<ol start=3 type="I">
+<li> 3 en romano
+<li> 4 en romano
+<li> 5  en romano
+</ol> 
+<center><img src="color.gif" width="400" height="1"></center><br><br>
+<font color=blue><H3><A NAME="UL">2.Listas Desordenadas</font></H3>
+Tambien se conocen con el nombre de “Bullet list” por conocerse en inglés al punto o dibujo que precede a cada elemento con el nombre de “bullet”. <br><br>
+Este tipo de lista  empieza delimitando por la directiva &ltUL&gt...&lt/UL&gt (Unordered List, lista sin orden), entre las que se incluirán los elementos de la lista. Cada uno de los elementos irán precedidos de la directiva &ltLI&gt (List Item, artículo de la lista).<br><br>
+EJEMPLO:<br><br>
+&lt;UL&gt;<br> 
+&lt;LI&gt;Primer elemento<br>
+&lt;LI&gt;Segundo elemento<br>
+&lt;LI&gt;Tercer elemento</TT><br>
+&lt;/UL&gt;<br><br>
+
+El cual se veria asi:<br><br>
+
+<UL>
+<LI>Primer elemento</LI>
+<LI>Segundo elemento</LI>
+<LI>Tercer elemento</LI>
+</UL>
+<br><br>
+Una característica del “punto” o carácter que aparece antes de cada uno de los elementos cuando los visualizamos, es que podemos modificarlo por medio de un atributo que se introduce en la directiva que define la lista &ltUL&gt, y que es el atributo TYPE. <br><br>
+TYPE=“bullet”<br> <br>
+Es la empleada por defecto y aparecerá un pequeño disco negro o punto. <br><br>
+TYPE=“circle”<br> <br>
+aparece un disco vacío en el que se distingue el contorno. <br><br>
+TYPE=“square” <br><br>
+aparece un pequeño cuadrado negro al lado de cada elemento. <br><br>
+<center><img src="color.gif" width="400" height="1"></center><br><br>
+<font color=blue><H3><A NAME="DL">3.Listas descriptivas</H3></font>
+O también conocidas como “glossary list” (listas de glosario). Se trata de una lista de 2 niveles: cada elemento se descompone en un nombre que ocupa la primera línea, y una definición que ocupa las siguiente.<br><br>
+
+La lista está delimitada por la directiva &ltDL&gt...&lt/DL&gt (definition list, lista de definición). En estas listas el elemento a definir debe de llevar la directiva &ltDT&gt en lugar de la &ltLI&gt anterior, y la definición de este elemento la directiva &ltDD&gt.<br><br> 
+
+En este tipo de listas poco más se puede añadir, ya que no hay atributos de ningún tipo.  <br><br>
+
+<b>EJEMPLO</b><br><br>
+
+
+&lt;DL&gt<br>
+&lt;DT&gt;Primer nombre a describir&lt;/DT&gt<br>
+&lt;DD&gt;Descripci&oacute;n del primer nombre <BR>
+&lt;DT&gt;Segundo nombre a describir&lt;/DT&gt<br>
+&lt;DD&gt;Descripci&oacute;ndel segundo nombre<br>&lt/DL&gt<BR><br>
+El cual se veria asi:<br><br>
+<DL>
+<DT>Primer nombre a describir</DT>
+<DD>Descripci&oacute;n del primer nombre </DD>
+<DT>Segundo nombre a describir</DT>
+<DD>Descripci&oacute;n del segundo nombre </DD>
+</DL><br>
+<center><img src="color.gif" width="400" height="1"></center><br><br>
+<font color=blue><h3><A NAME="MENU">MENU</h3></font>
+Existen otros dos tipos de listas menos comunes. Las listas de Men&uacute; o Directorio. <br><br>
+La lista de Men&uacute; utiliza la directiva <B>&lt;MENU&gt;&lt;/MENU&gt;</B> y los 
+elementos se anteceden de <B>&lt;LI&gt;</B> este tipo de lista es utilizado cuando tenemos una opcion de la  cual se derivan varias subopciones. La lista de Directorio 
+utiliza la directiva <B>&lt;DIR&gt;&lt;/DIR&gt;</B> y los elementos se anteceden de 
+<B>&lt;LI&gt;</B>. Los elementos tienen un limite de 20 caracteres.<P>
+<P>
+<CENTER>
+<TABLE border=2 cellpadding=2 cellspacing=2>
+<TH>Ejemplo<TH>Resultado<TR>
+<TD>
+<DL>
+<DT><B>&lt;UL type= </B>disk<B>&gt;</B>
+<DD><B>&lt;LI&gt;</B>Buscadores
+<DL>
+<DT><B>&lt;UL&gt;</B>
+<DD><B>&lt;LI&gt;</B>Yahoo
+<DD><B>&lt;LI&gt;</B>Ole
+<DD><B>&lt;LI&gt;</B>Lycos
+<DT><B>&lt;/UL&gt;</B>
+</DL>
+<DD><B>&lt;LI&gt;</B>Links
+<DL>
+<DT><B>&lt;UL&gt;</B>
+<DD><B>&lt;LI&gt;</B>Microsoft
+<DD><B>&lt;LI&gt;</B>IBM
+<DT><B>&lt;/UL&gt;</B>
+</DL>
+<DT><B>&lt;/UL&gt;</B>
+</DL>
+<TD>
+<UL type=disk>
+<LI>Buscadores
+<UL>
+<LI>Yahoo
+<LI>Ole
+<LI>Lycos
+</UL>
+<LI>Links
+<UL>
+<LI>Microsoft
+<LI>IBM
+</UL>
+</UL>
+<TR>
+</TABLE>
+</CENTER>
+<br><center><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center>
+</font>
+</html>

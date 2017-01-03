@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Java script</title>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<center>
+<h3><font color="blue">A prueba de veteranos</h3></font>
+</center>
+
+Ya lo sabes: JavaScript no funciona igual en las diferentes ediciones de los dos navegadores más 
+populares: Netscape Navigator y Explorer. Aunque es muy difícil que un usuario siga usando las 
+primeras versiones de estos browsers, hay que estar atentos y prevenir cualquier error a los 
+internautas desactualizados.
+<p>
+Todos los navegadores omiten las etiquetas desconocidas, por lo tanto, aquellos que no 
+"entiendan" JavaScript ignorarán lo que encierra el tag <b>&ltSCRIPT></b>. Pero para ocultar el 
+resto del código y evitar que aparezca en la pantalla del navegante, conviene guardarlo entre 
+los símbolos que el HTML usa para los comentarios: , como podrás ver si cliqueas sobre la figura.
+<p>
+<center>
+<img src="esconder.jpg"><br>
+<a onclick="window.open('imagen2.htm','popup','width=520 height=225')">
+<font face=Fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a>
+</center>
+<p> 
+Analiza el ejemplo. Los navegadores que soporten JavaScript leerán el código encerrado en el tag 
+<b>&ltSCRIPT></b> y dejarán de lado la línea que comienza con la doble barra (<b>//</b>), signo 
+para los comentarios propio de este lenguaje. Es muy importante el uso de la "<b>//</b>" para 
+evitar un fallo en el programa.
+<p>
+De todos modos, ocultar el código es una buena forma de evitar problemas con esos "veteranos" 
+que prefieren seguir fieles a sus viejos y queridos browsers. Pero ¿qué sucede con aquellos 
+navegantes despistados que poseen un navegador capaz de leer JavaScript, pero que tienen la 
+opción desactivada?
+<p>
+Muy fácil: la etiqueta <b>&ltNOSCRIPT></b> se los advertirá con un mensaje. Lo entenderás mejor 
+en este ejemplo:
+<p>
+<center>
+<img src="noscript.gif">
+</center>
+<p> 
+Como muestra el código, el tag <b>&ltNOSCRIPT></b> se ubica en el cuerpo (<b>&ltBODY></b>) de la 
+página y se usa para escribir en HTML un mensaje que verán aquellos usuarios que tienen 
+deshabilitada la opción JavaScript de su browser. En caso contrario, se ejecutarán normalmente 
+los procedimientos creados dentro de la etiqueta <b>&ltSCRIPT></b>. Prueba este ejemplo, tomando 
+la precaución de cambiar la configuración de tu navegador y quitar la opción de ejecutar JavaScript.
+<p>
+<center>
+<a onclick="window.open('prueba.htm','popup','width=500 height=425')">
+<font style=cursor:hand color=blue><u>Prueba tus conocimientos...</u></font></a>
+</center>
+<p> 
+<font size=2>
+<center>Copyright© 2002 Hazek Web Site®</center>

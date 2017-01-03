@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Tus conocimientos</title>
+<script language="JavaScript">
+<!-- oculto script
+
+function pregunta1(form) {
+  if (form.text1.value == "<script>" || form.text1.value == "<SCRIPT>")
+    alert("¡Correcto!")
+  else alert("¡Nooo, muy mal!");
+  }
+
+function pregunta2(form) {
+  if (form.text2.value == "//") 
+     alert("¡Excelente!");
+  else alert("¿Estás seguro?");
+}
+
+function pregunta3(form) {
+  if (form.text3.value == ";") 
+     alert("¡Muy bien!");
+  else alert("Me parece que te equivocas...");
+
+}
+// -->
+</script>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<font color=blue><center><h3>Prueba tus conocimientos</h3></font>
+<img src="color.gif" width=350 height=1></center>
+<center>
+<form name="prueba">
+        <p><font face="Verdana" size="2"><b>¿Con 
+          qué etiqueta se inserta un código JavaScript en el HTML?</b></font></p>
+        <input type="text" name="text1">
+        <input type="button" name="button1" value="Listo" onClick="pregunta1(this.form)">
+        <p> <font size="2" face="Verdana"><b>¿Cuál 
+          es el símbolo para comentarios en JavaScript?</b></font> </p>
+        <input type="text" name="text2">
+        <input type="button" name="button2" value="Listo" onClick="pregunta2(this.form)">
+        <p> <font face="Verdana" size="2"><b>¿Qu&eacute; 
+          caracter se usa para finalizar una instrucción JavaScript?</b></font></p>
+        <input type="text" name="text3">
+        <input type="button" name="button2" value="Listo" onClick="pregunta3(this.form)">
+      </form>
+<a onClick="window.close()"><font  color=black style=cursor:hand><u>Cerrar</u></font></a>
+</center><hr noshade>
+<br><center>
+<a href="e_teoricos.htm";"window.close()" target="main">Elementos Teoricos...</a>
+</center>

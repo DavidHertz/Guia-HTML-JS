@@ -1,0 +1,108 @@
+<HTML>
+<HEAD>
+<TITLE>Diseño Web</TITLE>
+
+<BODY link=BLUE vlink=RED alink=GREEN>
+
+<BODY BGCOLOR="000000">   
+<body onload="Animate(myheading)">
+<script>
+var lnum = 50;
+var movenum = 1;
+function Highlight(Object) { Object.className = "Over" }
+function Normal(Object) { Object.className = "Norm" }
+function Animate(Object) { 
+Object.style.visibility = "visible"; 
+Object.style.fontStyle = "italic"; 
+if (lnum > 2) {
+lnum = lnum - movenum;
+Object.style.pixelLeft = lnum;
+window.setTimeout("Animate("+Object.id+")",1);}
+else {
+Object.style.pixelLeft =52;
+Object.style.fontStyle = "normal";}} 
+</script>
+<b><i>
+<div id=myheading class=Head>
+<i><font color=ff0000>Guia</font></i><br>
+</div>
+</b>
+</i><p>
+<style>
+.Norm { text-align: center; width: 100; cursor: hand; font-family: verdana; font-size: 20; font-weight: normal; background-color: #00ff00; color:0000ff;} 
+.Over { width: 100; text-align: center; cursor: hand; font-family: verdana;
+font-size: 20; font-weight: normal; background-color: red; color:
+white;} 
+.Head { position: absolute; width: 10; font-family: verdana; font-size: 32; font-weight: bold; <!--font-style: italic; color: #ffffff; visibility: hidden}--> </style>
+<font face="Verdana, Arial, Helvetica" SIZE=2" color="#FFFFFF">
+<br>
+</div>
+<BODY link=BLUE vlink=RED alink=GREEN>
+<br><br>
+<center>
+<table border="0  width="100%" height="5%">
+<tr bgcolor="00ff00"><td align="center"><font face="verdana" size="1">
+<a href="http://www.geocities.com/hazeksite" target="_blank">Hazek Web Site®</a></font></td></tr>
+</table> 
+
+<img spacing="100" src=color.gif width=150 height=2>
+<br>
+<i>INTRODUCCION AL HTML</i><br>
+   <i><A HREF="queeshtml.html" target="main">Que es HTML</A><br>
+      <A HREF="queeshtml.html#Origenes del HTML"  target="main">Origenes del  HTML</A><br>
+      <A HREF="queeshtml.html#Plantilla de un documento"   target="main">Plantilla de un documento</A><br><br>
+<i>TAGS BASICOS</i><br>   
+      <A HREF="tagsbas.html"  target="main">&ltHTML&gt</A><br>
+      <A HREF="tagsbas.html#&ltHEAD&gt"  target="main">&ltHEAD&gt</A><br>     
+      <A HREF="tagsbas.html"  target="main">&ltTITLE&gt</A><br>
+      <A HREF="tagsbas.html#&ltBODY&gt "  target="main">&ltBODY&gt</A><br><BR>
+<i>OTROS TAGS</i><br>   
+      <A HREF="otros.html"  target="main">&ltb&gt, &ltI&gt,&ltU&gt</A><br><br>
+<i>ETIQUETAS META</i><BR> 
+      <A HREF= "tagsbas.html#ETIQUETAS META "  target="main">&ltMETA&gt</A><br><BR>
+<i>CARACTERES ESPECIALES</i><br>
+      <A HREF="caracteres.html"  target="main">nbsp, acen</A><BR><BR>
+<i>TAMAÑO, COLOR Y TIPO DE LETRA.</i><BR>
+      <A HREF="tipo.html"  target="main">&ltFONT SIZE&gt<BR>,&ltFONT COLOR&gt<BR>,&ltFONT FACE&gt<BR></A><br> 
+<i>PARRAFOS,SALTOS DE LINEA,LINEAS HORIZONTALES.</i><BR>
+      <A HREF="parafo.html"  target="main">&ltP&gt<BR></A>
+      <A HREF="parafo.html#&ltBR&gt"  target="main">&ltBR&gt</A><br>
+      <A HREF="parafo.html#&ltHR&gt"  target="main">&ltHR&gt</A><br><br>
+<i><TEXTO PREFORMATEADO</i><BR>
+      <A HREF="parafo.html#&ltPRE&gt"  target="main">&ltPRE&gt</A><BR>
+      <A HREF="parafo.html#&ltSPACER&gt"  target="main">&ltSPACER&gt</a><BR><br>
+<i>COLUMNAS DE TEXTO</i><BR>
+      <A HREF="parafo.html#&ltMULTICOL&gt"  target="main">&ltMULTICOL&gt</A><BR><BR>
+<i>LISTAS ORDENADAS,<BR>DESORDENADAS,MENU</i><BR>
+      <A HREF="listas.html#ol"  target="main">&ltOL></A><br>
+      <A HREF="listas.html#Ul"  target="main">&ltUL></A><br>
+      <A HREF="listas.html#Dl"  target="main">&ltDL></A><br>
+      <A HREF="listas.html#MENU"target="main">&ltMENU></A><br><BR><BR>
+<i>TABLAS</i><BR>
+      <A HREF="tablas.html"  target="main">&ltTABLE&gt</A><BR><BR>
+<i>ENLACES</i><BR>
+      <A HREF="enlaces.html"  target="main">&ltA HREF&gt</A><BR><BR>
+<i>IMAGENES</i><BR>
+      <A HREF="imagenes.html"  target="main">&ltIMG&gt</A><BR><BR>
+<i>FORMULARIOS</i><BR>
+      <A HREF="formulario.html"  target="main">&ltFORM&gt</A><BR><BR>
+<i>FRAMES</i><BR>
+      <A HREF="FRAME.HTML"  target="main">&ltFRAME&gt,&ltFRAMESET&gt</A><BR><BR>
+<i>PAGINAS CON SONIDOS Y VIDEO</i><BR>
+      <A HREF="video.html"  target="main">&ltEMBED&gt</A><BR><BR>
+      <A HREF="contadores.html"  target="main">CONTADORES Y LIBROS DE VISITA</A><BR><BR>
+<i>EN LA WEB</i><br>
+      <A HREF="dondealbergar.html"  target="main">DONDE ALBERGAR TU WEB</A><BR><BR></i>
+      <A HREF="dondealbergar.html#Como hacerla localizable"  target="main">COMO HACERLA LOCALIZABLE</A><p>
+<center><img src="color.gif" width=150 height=2><p>
+<table border=0 width=90% background="fondo.jpg">
+<tr bgcolor="black">
+<td align=center><font face="verdana" size="2" color=00ff00><marquee behavior="alternate"><b><i>JavaScript</marquee></td>
+</i></b></tr>
+<tr><td align=center><font face="verdana" size="2"><a href="menu.htm"><small>Click aqui!</small></a></td></tr>
+</table><br>
+<center><img spacing="100" src=color.gif width=150 height=2></center><br>
+
+<br></i>
+<center><font color="white" size="1">Hazek Web Site®</font></center> 
+</HTML> 

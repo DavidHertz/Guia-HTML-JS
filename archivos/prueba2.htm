@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Tus conocimientos</title>
+<script language="JavaScript">
+<!-- oculto script
+
+function pregunta1(form) {
+  if (form.text1.value == "operadores" || form.text1.value == "OPERADORES")
+    alert("¡Correcto!")
+  else alert("¡Nooo!!!");
+  }
+
+function pregunta2(form) {
+  if (form.text2.value == "al lugar donde guardamos una informacion determinada" || form.text2.value == "AL LUGAR DONDE GUARDAMOS UNA INFORMACION DETERMINADA" || form.text2.value == "donde guardamos una informacion determinada" || form.text2.value == "DONDE GUARDAMOS UNA INFORMACION DETERMINADA")
+    alert("¡Correcto!")
+  else alert("Piensalo dos veces...");
+}
+
+function pregunta3(form) {
+  if (form.text3.value == "logicos" || form.text3.value == "LOGICOS" || form.text3.value == "Logicos")
+    alert("¡Correcto!")
+  else alert("Vuelve a leer!");
+
+}
+// -->
+</script>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<font color=blue><center><h3>Prueba tus conocimientos</h3></font>
+<img src="color.gif" width=350 height=1></center>
+<center>
+<form name="prueba">
+        <p><font face="Verdana" size="2"><b>Las variables y los <input type="text" name="text1" size=10> son los mas importantes.</b></font></p>
+        
+        <input type="button" name="button1" value="Listo" onClick="pregunta1(this.form)">
+        <p> <font size="2" face="Verdana"><b>¿Que nombre se le da a una variable?</b></font> </p>
+        <input type="text" name="text2" size=35>
+        <input type="button" name="button2" value="Listo" onClick="pregunta2(this.form)">
+        <p> <font face="Verdana" size="2"><b>A <font color=red>Y</font> y <font color=red>O</font> se les llama operadores... </b></font></p>
+        <input type="text" name="text3">
+        <input type="button" name="button2" value="Listo" onClick="pregunta3(this.form)">
+      </form>
+<a onClick="window.close()"><font  color=black style=cursor:hand><u>Cerrar</u></font></a>
+</center><hr noshade>
+<br><center>
+<a href="intersite.htm" target="main">Tu sitio interactivo...</a>
+</center>

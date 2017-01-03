@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>JavaScript</title>
+<script language="Javascript">
+function popup(){
+ventana = window.open("#","","height=100,width=150");
+	ventana.document.write("<B><center>¡Esto es sólo uno de los tanto Objetos de JavaScript!</center></B>");
+	ventana.document.bgColor="yellow";	
+}
+</script>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<center>
+<h3><font color="blue">Convierte a tu página en un objeto del deseo</h3></font>
+</center>
+Si estas leyendo esto, quiere decir que ya haz recorrido un buen tramo del recorrido, si haz 
+puesto atencion ya deberas saber usar <b>funciones</b>, <b>operadores</b> por lo menos en un 75% entre
+otras cosas. Asi que no hay que perder mas tiempo y vamos a seguir con este maravilloso lenguaje que
+es JavaScript que le da vida a tu sitio.
+<br><br>
+Desde el empiezo de esta guia se dijo que "<b>JavaScript trabaja con objetos</b>". Es más, 
+hasta se utilizaron muchos de ellos en los diversos scripts a lo largo de las clases. Pero, 
+¿qué significa en este contexto un "<b>objeto</b>"? Tal vez tengas una idea si presionas el 
+siguiente botón. 
+<br><br>
+<form>
+<center>
+<input type="button" value="¿Quieres ver un objeto?" onClick="popup()">
+</center>
+</form>
+<br>
+¿No fue suficiente? Bien, continúa leyendo para descubrir la respuesta. 
+<br><br>
+<center>
+<h3><font color="blue"><a name=deseo>¿Qué es un objeto?</h3></font>
+</center>
+En JavaScript, un objeto es absolutamente <b>todo</b>. ¿Cómo? Sí, lo que has leído.
+<br><br>
+Todos los elementos que componen tu página web, desde la misma ventana hasta los botones, 
+listados e imágenes son considerados por el lenguaje como <b>objetos</b>, a los que se puede 
+manipular.
+<br><br>
+Para ser más claro, JavaScript trata a los elementos que componen un documento como si fuesen 
+algo físico, que se puede "<b>tocar</b>", "<b>mover</b>" o "<b>alterar</b>".
+<br><br>
+Estos objetos que forman la página no están "<b>sueltos</b>", sino que se <b>ordenan en una 
+estructura jerárquica</b> que establece la relación que hay entre unos y otros. Observa el 
+siguiente esquema:
+<br><br>
+<center>
+<a onclick="window.open('imagen6.htm','popup','width=700 height=430')">
+<font face=Fixedsys style=cursor:hand color=red><u>Jerárquia de los objetos</u></font></a>
+</center>
+<br>
+Para JavaScript, el objeto principal es "<b>Window</b>", que refiere a la <b>ventana del 
+programa navegador</b>. Todo browser tiene una página activa, representada por el objeto 
+"<b>Document</b>". Y éste, a su vez, reúne a todos los elementos que componen al documento, 
+como las imágenes (objeto "<b>Image</b>") o formularios (objeto "<b>Form</b>") que pueda tener. 
+<br><br>
+De esta manera, los objetos se relacionan por composición, es decir, por los diferentes 
+elementos que los integran. Se puede decir, entonces, que JavaScript considera a tu browser 
+como una carpeta "<b>raíz</b>", que contiene a los demás objetos en diferentes 
+"<b>subcarpetas</b>".
+<br><br>
+Ahora que conoces todos los objetos que reconoce JavaScript, te preguntarás cómo aprovecharlos. 
+Paciencia...paciencia. Antes deberás saber qué son las <b>Propiedades</b> y los <b>Métodos</b> 
+de los objetos.
+<p>
+<center>
+<h3><font color="blue"><a name=propiedades>Objetos y propiedades</h3></font>
+</center>
+Todo objeto está compuesto de <b>Propiedades</b>, que son características o atributos que 
+definen su composición. Con este razonamiento, y tomando como apoyo el organigrama anterior, 
+es posible decir que <b>la propiedad de un objeto</b> es, en realidad, <b>otro objeto</b>.
+<p>
+Por ejemplo, el elemento "<b>Image</b>" tiene rango de objeto, pero también es propiedad del 
+objeto "<b>Document</b>". Y éste, a su vez, es propiedad del objeto "<b>Window</b>" (recuerda 
+la relación por composición).
+<p>
+La sintaxis para referirse a la propiedad de un objeto es la siguiente:
+<br><br><b>
+nombre_objeto.<font color=red>nombre_propiedad</font>=<font color=blue>valor</font>
+<br><br></b>
+Prueba el siguiente ejemplo para ver cómo se puede alterar una propiedad. Pasa el cursor sobre 
+este vínculo y fíjate lo que aparece en la <b>barra de estado</b> de tu browser, al <b>pie 
+izquierdo de la pantalla</b>.
+<p>
+Es un detalle muy fino, y se puede hacer con sólo cambiar el <font color="blue"><b>valor</b></font> de 
+la <b>propiedad</b> que define la barra de estado del navegador. Sin embargo, son necesarias dos 
+aclaraciones sobre la sintaxis en el uso de propiedades.
+<p>
+•<b>Se puede evitar la referencia al objeto</b>: en JavaScript, es posible "<b>llamar</b>" a 
+una propiedad o método <b>sin escribir</b> el <b>nombre</b> del objeto, ya que el lenguaje 
+interpreta que hay una alusión directa al objeto "<b>Window</b>". Para evitar confusiones, en 
+este tutorial siempre se hará explícita la mención del objeto. 
+<p>
+•<b>No todas las propiedades deben recibir un <font color="blue">valor</font></b>: más 
+adelante verás que muchos atributos tienen un resultado ya implícito (casi siempre una <b>variable 
+lógica</b>) que será necesario modificar según la tarea a cumplir. 
+<p>
+No dependes únicamente de las propiedades para cambiar los componentes de tu página, ya que el 
+trabajo con objetos se completa gracias a los <b>Métodos</b>.
+<center>
+<h3><font color="blue"><a name=metodos>Objetos y métodos</h3></font>
+</center>
+Las propiedades son las características de un objeto, pero ¿qué podemos hacer con ese objeto?
+
+Al igual que la imaginación, JavaScript no ofrece límites sobre las tareas que podemos realizar 
+con las piezas de una página, pero hay que partir de una idea básica: <b>cada objeto tiene 
+funciones específicas</b>.
+<p>
+Por ejemplo, con un lápiz puedes hacer muchas cosas, pero su utilidad básica es la escritura. 
+Lo mismo sucede con los <b>botones</b>, <b>listados</b>, <b>cuadros</b> y otros objetos que 
+tenga tu página.
+<p>
+Para usar las acciones elementales de cada objeto, JavaScript nos ofrece los "<b>métodos</b>".
+<p>
+Un método es una <b>función asociada a cierto tipo de objeto</b>. Por ejemplo, ¿qué métodos se 
+te ocurre que podría tener, por defecto, una ventana? Muy sencillo: las funciones de abrirse, 
+cerrarse, cambiar de tamaño y otras acciones que hacen a la "naturaleza" de la ventana.
+<p>
+Para "<b>despertar</b>" esas tareas fundamentales de cada elemento, deberás utilizar la siguiente sintaxis:
+<p><b>
+nombre_objeto.<font color=red>nombre_método<font color=blue>(parámetros)</font></font>
+<p>
+Al igual que las propiedades</b>, los métodos varían según el tipo de elemento sobre el que 
+trabajes, y <b>también se puede obviar el <font color=red>nombre del objeto</font></b>. 
+Esto acelera la escritura del código pero, como algunos métodos se repiten en varios objetos, 
+<b>JavaScript puede provocar errores en la página</b> al no poder distinguir el objeto al que 
+debe asociarlo. Por lo tanto, es recomendable aclarar siempre el nombre del objeto.
+<p>
+Por otro lado, los <font color=blue><b>parámetros</b></font> son los datos que necesita cada método 
+para funcionar y, dependiendo de la acción, pueden usarse o no.
+<p>
+Un ejemplo de método es la ya clásica sentencia document.<font color=red>write</font> que, 
+junto con el parametro <font color=blue><b>("Hola")</b></font>, permite escribir un mensaje en la 
+página activa.
+<p>
+Sigue leyendo, por que podrás practicar con las principales propiedades y métodos de 
+"<b>Window</b>", el padre de todos los objetos en JavaScript.
+<p> 
+<center>
+<a href="ventana.htm">Abre una ventana...</a>
+<br><br>
+<font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center> 
+
+
+

@@ -1,0 +1,213 @@
+<html>
+<head>
+<title>JavaScript</title>
+<script language="Javascript">
+function pelicula(){
+if ((form1.director.value=="JAMES CAMERON") && (form1.actor.value=="LEONARDO DI CAPRIO"))
+alert("¡Correcto!");
+else
+alert("¿No viste la película?");
+}
+function titanic(){
+if (miform2.director2.value=="JAMES CAMERON" || miform2.director2.value=="james cameron")
+alert("¡Muy bien!");
+else
+alert("¡Incorrecto!");
+}
+function clave(){
+variable=prompt("¿David Hernandez Gutierrez es el diseñador de Hazek Web Site®? (si/no)", "");
+if(variable=="si")
+window.open("secret.htm", "ventana","width=500,height=150,toolbars=no,resize=no,location=no");
+else
+alert("¡Acceso Denegado!");
+}
+</script>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<center>
+<h3><font color="blue">Controladores de eventos</h3></font>
+</center>
+Esta guia se cierra con las <b>estructuras condicionales</b>, una herramienta muy útil de 
+programación, que te permitirá crear funciones de avanzada en tu página web.
+<p>
+La estructura condicional más difundida y sencilla es la conocida como <b>if...else</b> 
+(cuya traducción podría ser <b>si...si no</b>). Este código te servirá para diseñar scripts que 
+<b>evalúen</b> ciertas condiciones y actuen en consecuencia, siguiendo un razonamiento lógico.
+<p>
+<img align=left src="edad.gif">Por ejemplo, imagina que tu sitio debe derivar a los visitantes 
+hacia distintas páginas de acuerdo a su edad. Con la sentencia <b>if...else</b> podrás hacer que los
+ usuarios mayores de 21 años ingresen a un sector del site y los menores a otro. En pocas 
+palabras, esta estructura trabaja de acuerdo al <b>cumplimiento de requisitos</b>, siguiendo un 
+esquema similar al que exhibe el cuadro de esta página.
+<p>
+Para saber cómo llevar este razonamiento al papel (o, mejor dicho, al editor de textos), sigue 
+leyendo.
+<p>
+<center>
+<h3><font color="blue"><a name=if>Uso de if...else</h3></font>
+</center> 
+La estructura de programación <b>if...else</b> es una de las más antiguas que existen, y es común en 
+muchos lenguajes, como <b>C</b> o <b>Visual Basic</b>.
+<p>
+En JavaScript es capaz de realizar una tarea u otra de acuerdo al resultado obtenido al evaluar 
+una condición. Por ejemplo, con <b>if...else</b> podrás crear un script que brinde acceso a una página sólo si el usuario escribe el dato correcto (ya verás cómo lograrlo).
+<p>
+Para usar esta estructura, es importante tener bien claro cuál es la condición a cumplir para 
+luego codificar las acciones que la función debe realizar. Fíjate en la sintaxis, es muy 
+sencilla:
+<p>
+<b><i><font color=red>if</font><font color=blue>(condición 1)</font>
+<p>
+procesos si la condición se cumple;
+<p><font color=red>
+else
+<p>
+procesos si la condición no se cumple;
+<p></font></i></b>
+Esta sintaxis, traducida a código, podría ser como el siguiente ejemplo:
+<p><i><b>
+<font color=red>if</font><font color=blue> (respuesta.value == "Jorge Luis Borges")
+<p>
+alert("¡Te felicito, es correcto!");
+<p></font>
+<font color=red>else
+<p>
+alert("¡Estás equivocado!");
+<p></font></i></b>
+Este script imaginario mostraría dos mensajes diferentes de acuerdo a lo que escriba el usuario 
+en un cuadro de texto (<b>respuesta.value</b>). Si la respuesta es "<b>Jorge Luis Borges</b>", el mensaje 
+será de felicitación, y si es incorrecta, mostrará una ventana indicando el error.
+<p>
+Siempre que trabajes con <b>if...else</b> debes tener en cuenta dos elementos importantes:
+<p>
+<b>1) No necesitas definir cuál es la condición incorrecta</b>, ya que en una estructura <b>if...else</b> todo 
+lo que sea distinto a la condición establecida será interpretado como incorrecto y, por lo 
+tanto, las acciones serán manejadas según lo que se defina en el apartado <b>else</b>.
+<p>
+En el ejemplo anterior, si se escribe sólo "<b>Borges</b>" el programa dirá que la respuesta es 
+<b>errónea</b> aunque tú la consideres correcta, porque el nombre completo del autor se definió como 
+condición válida.
+<p>
+<b>2)</b> Para establecer las condiciones es necesario el uso de <b>operadores de comparación o relación</b> 
+( por ejemplo igual, mayor que, menor que) y "<b>lógicos</b>" o "<b>booleanos</b>" (AND u OR). Si desconoces los 
+símbolos que representan a estos operadores, es importante que leas <a href="intersite.htm" target="main">Sitio interactivo</a>
+del tutorial para saber cuáles son.
+<p>
+Los <b>operadores lógicos</b> se usan para definir no una, sino varias condiciones como necesarias 
+para que se realice cierta tarea (en las próximas páginas verás cómo hacerlo).
+<p>
+Sigue leyendo para aprender a hacer tus primeros scripts con la estructura <b>if...else</b>.
+<p>
+<center>
+<h3><font color="blue"><a name=decision>Una buena decisión</h3></font>
+</center>
+Ya conoces los conceptos básicos de la estructura condicional. Es tiempo de llevarlos a la 
+práctica. El siguiente <b>ejemplo</b> te dará acceso a una página oculta de Hazek Web Site® <b>sólo si contestas 
+bien a una pregunta</b>. Pulsa el botón y prueba lo que sucede.
+<p>
+Acceso exclusivo para seguidores de <b>Hazek Web Site®</b>:
+<p><center>
+<input type="button" name="acceso" value="Ingresar" onClick="clave()">
+<p></center>
+¿Te gusto este script? Es interezante no solo por la funcion que cumple, si no por que usa
+muchas de las herramientas que aprendiste a lo largo de esta guia. Fíjate en el código para 
+comprobarlo.
+<p>
+<center><img src="prompt.gif"><br>
+<a onClick="window.open('imagen16.htm','popup','width=500 height=400')">
+<font face=fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a></center>
+<p>
+Para realizar este ejemplo, primero se crea la función "<b>clave()</b>", y se guarda en una variable un 
+cuadro del tipo "<b>prompt</b>", que se encargará de hacer la pregunta.
+<p>
+Luego, se usa la estructura <b>if</b> para determinar la respuesta correcta (<b>variable == no</b>) y abrir 
+la ventana que muestra la página secreta (<b>window.open...</b>). Aquí figura una dirección web 
+ficticia, que tú deberás reemplazar por la URL que tenga la página que desees mostrar.
+<p>
+En caso de que la respuesta del usuario sea incorrecta, el <b>else</b> se encargará de exhibir en 
+pantalla un cuadro de error. Por último, se diseña un botón (<b>input type="button"</b>) cuyo evento 
+"<b>onClick</b>" llama a la función que pone en marcha toda la tarea.
+<p>
+Todo parece sencillo cuando se trabaja sobre una sola condición, pero ¿qué pasa cuando el 
+programa debe evaluar más? No hay ningún problema si sabes usar los <b>operadores lógicos</b>.
+<p>
+Sigue leyendo y sabrás cómo usar la estructura <b>if...else</b> con varias condiciones.
+<p>
+<center>
+<h3><font color="blue"><a name=mas>Más condiciones</h3></font>
+</center>
+Si tu script debe evaluar más de una alternativa, tendrás que apelar a los operadores lógicos 
+<b>AND</b> (Y) u <b>OR</b> (O). El primero utiliza el símbolo "<b>&&</b>" y se emplea cuando se deben cumplir obligatoriamente dos condiciones. 
+<p>
+Por ejemplo, en el siguiente script deberás escribir en <b>mayúsculas</b> el nombre correcto del 
+realizador y del protagonista de la película "<b>Titanic</b>" para obtener una respuesta correcta. 
+<p>
+Pruebalo:
+<p>
+<form name="form1">
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>¿Quiénes 
+          fueron el director y el actor de Titanic?</b></font></p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Director: 
+          <input type="text" name="director">
+          </font> </p>
+        <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Actor:</font> 
+          <input type="text" name="actor">
+          <input type="button" name="respuesta" value="Respuesta" onClick="pelicula()">
+          <br>
+       </form>
+<p>
+Si escribes mal algunos de los dos, el script mostrará un mensaje de error. Fíjate ahora en el 
+código para saber cómo establecer esta doble condición.
+<p>
+En este caso, se crea la función "<b>pelicula()</b>" con una estructura <b>if...else</b> de dos condiciones. 
+En ella, se define el contenido (<b>value</b>) correcto que deben tener los cuadros de textos 
+correspondientes al <b>director</b> y al <b>actor</b>, uniendo ambas condiciones con el operador <b>AND (&&)</b>. Y 
+luego, se utilizan mensajes del tipo "<b>alert</b>" para dar las respuestas.
+<p>
+<center><img src="titanic.gif"><br>
+<a onClick="window.open('imagen17.htm','popup','width=500 height=400')">
+<font face=fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a></center>
+<p>
+¿Qué sucede si tienes que realizar un script en el que no necesitas que se cumplan los dos 
+requisitos? Si con una sola condición alcanza para que se ejecute una acción te conviene usar 
+el operador <b>OR</b>, con el símbolo "<b>||</b>".
+<p>
+Retomando el ejemplo cinematográfico, el siguiente script muestra un mensaje afirmativo <b>sin 
+importar</b> si "<b>James Cameron</b>" se escribe todo con mayúsculas o con minúsculas.
+<p>
+<form name="miform2">
+        
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>Escribe 
+          el nombre del director de Titanic</b></font></p>
+<p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Director: 
+          <input type="text" name="director2">
+          </font> 
+          <input type="button" name="respuesta2" value="Respuesta" onClick="titanic()">
+          <br>
+</form>
+<p>
+Revisa el código para ver cómo se usa el operador <b>OR</b>. 
+<p>
+<center><img src="james.gif"><br>
+<a onClick="window.open('imagen18.htm','popup','width=500 height=400')">
+<font face=fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a></center>
+<p>
+Pues aqui concluye la guia de <b>JavaScript</b>, esperando que te haya servido de mucha
+ayuda, solo queda agradecer por leer esta guia a todos los lectores y un cordial saludo
+de David Hernandez Gutierrez Diseñador de Hazek Web Site®
+<p><center>
+<table border=0 width=85%>
+<tr>
+<td>
+<font color=red face=verdana size=2>
+<b>
+<marquee behavior="alternate">Gracias por visitar Hazek Web Site®</marquee></b></td>
+</tr>
+</table></center>
+<center><p>
+<font face=verdana size=2 color=black>Copyright© 2002 Hazek Web Site®</font>
+</center></html>
+
+

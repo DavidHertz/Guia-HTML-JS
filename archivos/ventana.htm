@@ -1,0 +1,268 @@
+<html>
+<head>
+<title>JavaScript</title>
+<script language="Javascript">
+function alerta(){
+alert("Esto es un cuadro Alert")
+}
+function confirma(){
+confirm("Esto es un cuadro Confirm")
+}
+function dialogo(){
+prompt("Hola", "Escribe un mensaje")
+}
+function AbrirVentana() {
+miventana=window.open("#","Ventana","toolbar=no,directories=no,menubar=no,status=no,height=150,width=200");
+miventana.document.write("<CENTER><B>Soy una nueva ventana</B></CENTER>");
+miventana.document.write("<CENTER><a href='' onClick='window.close()'>Haz click para cerrarme</a><CENTER>");
+}
+</script>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<center>
+<h3><font color="blue">Abre una ventana en tu sitio</h3></font>
+</center>
+<b>Objetos</b>, <b>propiedades</b> y <b>métodos</b>: ya leíste 
+suficiente sobre ellos en partes atras de esta guia. 
+Ahora llegó el momento de trabajar con ellos. Pero quizas, antes de 
+hacerlo necesites refrescar alguna idea, cliquea <a href="deseo.htm">
+aquí</a> para leer el capítulo de este curso donde se explican esos 
+conceptos.
+<p>
+Para este lenguaje de programación, todo lo que hay en tu navegador es 
+un objeto, que puede ser modificado a través de propiedades y métodos. 
+Dentro de la jerarquía en la que JavaScript ordena a los objetos 
+(un click <a onclick="window.open('imagen6.htm','popup','width=700 height=430')">
+<font style=cursor:hand color=blue><u>aquí</u></font></a> te la muestra), el más importante se 
+llama Window y representa la ventana de tu navegador.
+<p>
+Las propiedades y métodos del objeto <b>Window</b>, ayudan a crear ventanas flotantes (o 
+"<b>Pop-Ups</b>"), elegir su apariencia y hasta mostrar diferentes cuadros de diálogo con el 
+usuario.
+<p>
+<center>
+<h3><font color="blue"><a name=propiedades>Las propiedades de una ventana</h3></font>
+</center>
+¿Para que usar las propiedades? Recuerda que son atributos que definen a un elemento. En este 
+caso, el objeto <b>Window</b> tiene muchas propiedades, aunque aquí sólo encontrarás las que son 
+imprescindibles para dar forma a una ventana.
+<p>
+<center>
+<img src="ventana.gif"><br>
+<a onclick="window.open('imagen7.htm','popup','width=580 height=455')">
+<font face=Fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a>
+</center>
+<p>
+Esta es la lista:<hr>
+<p>
+<b>defaultStatus</b>: 
+<p>
+Determinar el mensaje que aparecerá en la barra de estado del navegador.
+<p>
+<b>Sintaxis</b>: <b><i>window.<font color=red>defaultStatus</font>=<font color=blue>"mensaje"</font></i></b>
+<p><br>
+<b>document</b>:
+<p>
+Refiere a la página actual que exhibe la ventana. <b>Document</b> es un objeto y, como tal, 
+tiene sus propiedades y métodos, que conocerás cuando se hable exclusivamente de este objeto. 
+<p>
+<b>Sintaxis</b>:<i><b> window.<font color=red>document</font></i></b>
+<p><br>
+<b>history</b>:
+<p>
+Listado (o "<b>Array</b>") que contiene las direcciones web visitadas por el usuario. También 
+es un objeto con propiedades y métodos que permiten acceder a esas URLs almacenadas. 
+<p>
+<b>Sintaxis</b>: <b><i>window.<font color=red>history</b></i></font>
+<p><br>
+<b>location</b>:
+<p>
+Refiere a la actual dirección web del navegador o sirve para definir un destino específico, ya 
+sea un sitio o un archivo de la PC.
+<p>
+<b>Sintaxis</b>:<i><b> window.<font color=red>location</font>=<font color=blue>"http://...." ó "file:///C:/Carpeta"</b></i></font>
+<p><br>
+<b>locationbar, menubar, scrollbars, statusbar y toolbar:</b>
+<p>
+Representan la barra de dirección, de menú, de desplazamiento, de estado y de herramientas, 
+respectivamente. En todas se aplica la propiedad "<b>visible</b>" para definir su presencia en 
+la ventana colocando el valor "true" o "false".
+<p>
+<b>Sintaxis</b>:<b><i> window.<font color=red>menubar</font>.<font color=blue>visible="false"</b></i></font>
+<p><br> 
+<b>Status</b>:
+<p>
+Sirve para definir un mensaje momentáneo o animado (<b>Scroll</b>) en la barra de estado del 
+Browser. Recuerda que esta es una propiedad diferente de defaultStatus y de statusBar. Se 
+emplea, por ejemplo, para mostrar una breve explicación de la función que cumple un botón, en 
+el momento en el que el usuario pasa el cursor sobre él. 
+<p>
+<b>Sintaxis</b>:<i><b> window.<font color=red>status</font>=<font color=blue>"mensaje"</b></i></font>
+<p><hr><p>
+<center>
+<h3><font color="blue"><a name=metodo>El método y su discurso</h3></font>
+</center>
+<b>Los métodos son las funciones primordiales que contiene cada objeto</b>. Para abandonar los 
+tecnicismos, podría decirse que es lo que está dado en la naturaleza de un cierto objeto.Así si 
+un balón fuera un objeto, su método sería "rodar", una propiedad que tiene naturalmente. 
+Volviendo a JavaScript, aqui van los métodos más útiles de <b>Window</b>.
+<p>
+<b>alert</b>: 
+<p>
+Muestra un cuadro de advertencia que avisa al usuario sobre cierta situación. Por ejemplo, un 
+error en la página. Para ver un cuadro tipo <b>alert</b>, cliquea <a href="#metodo" onClick="alerta()">aquí</a>.
+<p>
+<b>Sintaxis:<i> window.<font color=red>alert(</font><font color=blue>"mensaje"</font><font color=red>)</font></b></i>
+<p>
+<b>close</b>:
+<p>
+Cierra ventanas que hayan sido creadas por el método open. Si se usa para cerrar ventanas de 
+otro tipo, el usuario deberá responder un cuadro de interrogación para confirmar la acción, 
+salvo que la ventana activa tenga un solo documento en su historial.
+<p>
+<b>Sintaxis: <i>window.<font color=red>close()</i></b></font> 
+<p>
+<b>confirm</b>:
+<p>
+Muestra un cuadro de interrogación para que el navegante confirme una acción mediante los 
+botones <b>Aceptar</b> o <b>Cancelar</b>. Estos botones tienen el valor "<b>True</b>" y "<b>False</b>" respectivamente, y 
+para definir la elección que hizo el usuario se programan con una estructura de control, que se 
+verá más adelante. Para ver un cuadro del tipo confirm, haz click <a href="#metodo" onClick="confirma()">aquí</a>.
+<p>
+<b>Sintaxis:<i> window.<font color=red>confirm(<font color=blue>"mensaje"</font></font><font color=red>)</b></i></font>
+<p>
+<b>open</b>:
+<p>
+Abre una nueva ventana en el navegador. En su sintaxis hay que aclarar una URL de destino 
+(que puede ser un sitio o un documento alojando en el mismo servidor), un nombre para la nueva 
+ventana y las características que tendrá. 
+<p>
+<b>Sintaxis:<i> window.<font color=red>open(</font><font color=blue>URL,nombre,características</font><font color=red>)</font></i></b>
+<p>
+<b>prompt</b>:
+<p>
+Crea un cuadro de diálogo para que el usuario brinde un dato , por ejemplo, una contraseña para 
+ingresar a cierta página. Tiene un <b>parámetro</b> para definir el mensaje a mostrar y otro, opcional, 
+para mostrar una información dentro del cuadro de texto de la ventana. Al igual que los cuadros 
+tipo <b>confirm</b>, se usajunto a una estructura de control para determinar la acción del usuario. Para 
+ver un ejemplo de <b>prompt</b> presiona <a href="#metodo" onClick="dialogo()">aquí</a>.
+<p>
+<b>Sintaxis:<i> window.<font color=red>prompt(</font><font color=blue>"mensaje", "sugerencia"</font><font color=red>)</i></b></font>
+<p>
+<b>setTimeout</b>:
+<p>
+Este método llama a una <b>función</b> después de una determinada cantidad de milisegundos. Se usa para 
+realizar una operación que deba ejecutarse a cierta velocidad.
+<p>
+<b>Sintaxis:<i> window.<font color=red>setTimeout=(</font><font color=blue>"nombre_función", tiempo</font><font color=red>)</b></i></font>
+<p>
+<b>back, forward, home, stop</b>:
+<p>
+Estos métodos realizan las funciones de navegación básicas de cualquier browser, como retroceder 
+una página, avanzar, ir a la homepage o detener la descarga pero no son reconocidos por el 
+Internet Explorer.
+<p>
+<b>Sintaxis:<i> window.<font color=red>back()</font></i></b>
+<p>
+<center>
+<h3><font color="blue"><a name=cono>Integrando conocimientos</h3></font>
+</center>
+Ahora en un ejemplo, entrarán en juego algunas propiedades y métodos que te serán útiles para 
+aumentar las funciones de tu página. Cliquea sobre el siguiente link para ver el aspecto de la 
+ventana que construirás para ejercitar:
+<p>
+<center>
+<a href="#cono" onClick="AbrirVentana()">¿Quieres ver una ventana?</a>
+</center>
+<p>
+Bien, ahora observa el código para comprender paso a paso cómo se logró una ventana así.
+<p>
+<center><img src="newwin.gif"><br>
+<a onclick="window.open('imagen8.htm','popup','width=550 height=410')">
+<font style=cursor:hand face=Fixedsys color=blue><u>Ampliar</u></font></a>
+</center>
+<p>
+Como este script requiere de muchas acciones, ellas están reunidas en la función <b>AbrirVentana</b>.
+<p>
+Allí verás la variable "<b>miventana</b>" capaz de almacenar la tarea de abrir una nueva ventana 
+usando el método <b>open</b>. Pero seguramente te preguntarás qué son todos esos códigos entre sus 
+paréntesis.  
+<p>
+Las dobles comillas (<b>""</b>) definen la aparición de una página en blanco. Si quisieras que 
+la ventana muestre determinado sitio web, tendrías que escribir la URL indicada. "<b>Ventana</b>" es el 
+nombre del Pop-Up, y el resto del código define la apariencia que tendrá. En este caso, oculta 
+la barra de herramientas, los menúes y define su tamaño.
+<p>
+A cualquier ventana se le puede dar la forma que uno desee cambiando estas características.
+<p align=left>
+<table width="80%" border="1" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td bgcolor="#F0F0FF"><font face="Verdana" size="1"><b>directories</b>= 
+            yes / no</font></td>
+          <td bgcolor="#FFFFFF"><font face="Verdana" size="1">Barra de V&iacute;nculos</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#F0F0FF"><font face="Verdana" size="1"><b>location</b>= 
+            yes / no</font></td>
+          <td bgcolor="#FFFFFF"><font face="Verdana" size="1">Barra de Direcci&oacute;n</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#F0F0FF"><font face="Verdana" size="1"><b>menubar</b>= 
+            yes / no</font></td>
+          <td bgcolor="#FFFFFF"><font face="Verdana" size="1">Barra de Men&uacute;</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#F0F0FF"><font face="Verdana" size="1"><b>toolbar</b>= 
+            yes / no</font></td>
+          <td bgcolor="#FFFFFF"><font face="Verdana" size="1">Barra de Herramientas</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#F0F0FF"><font face="Verdana" size="1"><b>scrollbars</b>= 
+            yes / no</font></td>
+          <td bgcolor="#FFFFFF"><font face="Verdana" size="1">Barras de desplazamiento</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#F0F0FF"><font face="Verdana" size="1"><b>resizable</b>= 
+            yes / no</font></td>
+          <td bgcolor="#FFFFFF"><font face="Verdana" size="1">Posibilidad de redimensionar 
+            la ventana</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#F0F0FF"><font face="Verdana" size="1"><b>status</b>= yes 
+            / no</font></td>
+          <td bgcolor="#FFFFFF"><font face="Verdana" size="1">Barra de Estado</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#F0F0FF"><font face="Verdana" size="1"><b>height</b>= n&uacute;mero 
+            en pixels</font></td>
+          <td bgcolor="#FFFFFF"><font face="Verdana" size="1">Alto de la ventana</font></td>
+        </tr>
+        <tr> 
+          <td bgcolor="#F0F0FF"><font face="Verdana" size="1"><b>width</b>= n&uacute;mero 
+            en pixels</font></td>
+          <td bgcolor="#FFFFFF"><font face="Verdana" size="1">Ancho de la ventana</font></td>
+        </tr>
+      </table>
+<p>
+El uso de estos parámetros del método <b>open</b> es opcional, pero si no los declaras se abrirá 
+una ventana con todos los elementos visibles. Otro dato: no hace falta que agregar "<b>yes</b>" 
+por cada objeto a mostrar, ya que la sola mención de su nombre cumple la misma función. 
+<p>
+Volviendo al código de nuestro script, una vez definida la apariencia del Pop-Up, se usa la 
+sentencia <b>document.write</b> para crear, primero, un mensaje, y luego, un vínculo que al ser 
+cliqueado cerrará la ventana por medio del método <b>close()</b>.
+<p>
+¿Te pareció complicado? Ojalá que no. Sí comprendiste el rol de cada método y propiedad ya 
+lograste integrar el uso de estos conceptos con <b>funciones</b> y <b>variables</b>, otros temas 
+ya analizados en temas pasados de esta guia. En caso contrario, te conviene repasar los 
+temas anteriores de esta guia.
+<p> 
+<center>
+<a href="imginter.htm">Imagenes interactivas...</a>
+<p>
+<font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center> 
+
+
+

@@ -1,0 +1,158 @@
+<HTML>
+<HEAD>
+<TITLE>MANUAL DE HTML</TITLE>
+</HEAD>
+<body background="fondo.jpg" bgproperties=fixed>
+<FONT FACE=VERDANA>
+<b><h2><font color=blue>FORMULARIOS</font></h2></b>
+Los formularios son los principales elementos que permiten que el visitante interactue con nuestra pagina.<br><br>
+Los formularios son programas que estan escritos en lenguajes de programacion como: C, Perl, Java, Visual Basic, a este tipo de programas se les suele denominar como CGI (Common Gateway Interface). Los formularios son plantillas en las cuales el usuario introduce los datos o selecciona una opcion y la envia a un servidor o a nuestra direccion de correo electronico, (la cual  utiliza lo que en programacion se conoce con el nombre de "Codigo Transportable"). Un formulario trabaja basicamente asi: el visitante selecciona diferentes datos (campos) cada uno de los cuales quedará asociado a una variable. La principal aplicabilidad  de los formularios es la posibilidad de crear cuestionarios, encuestas, páginas de comentarios o cualquier documento en la que se desee una interacción por parte del usuario.<br><br>
+La etiqueta utilizada para crear un formulario es &ltFORM&gt...&ltFORM&gt.<br><br>Para que esta etiqueta pueda funcionar debe tener unos atributos. <br><br>
+<b><font color= blue>Cajas de texto</font></b><br><br>
+Existen tres formas de insertar un texto en un formulario.<br><br>
+La primera es  &LTINPUT TYPE="TEXT"  name=nombre&GT<br><br>
+EJEMPLO:<br><br>
+<INPUT TYPE="TEXT"><br><br>
+El valor TYPE="TEXT" indica que el tipo de dato que se va a introducir es un texto. <br><br>
+La segunda forma de insertar un texto es una variacion de la primera en vez de colocar TYPE=TEXT se coloca TYPE=PASSWORD.<br><br>
+EJEMPLO:<br><br>
+<INPUT TYPE="PASSWORD"><br><br>
+El valor  TYPE="PASSWORD" indica que lo que se va a introducir es una clave o una contraseña.<br><br>
+A simple vista no se puede diferenciar la una de la otra, la variacion se da a el momento que la persona introduce los datos. En el primero aparece el texto normal, en el segundo aparecen una estrellitas(esto es por razones de seguridad).<br><br>
+El tamaño de la caja tambien se puede variar esto se hace a traves del valor SIZE. Su valor por defecto es de 20. <br><br>
+Existe otro atributo que es MAXLENGTH el cual define el número máximo de caracteres que puede introducir el usuario. <br><br>
+Por ultimo esta VALUE que indica el texto por defecto que contendrá la caja. <br><br>
+EJEMPLO<br><br>
+Por favor, introduce tu nombre:&ltbr&gt<br>
+&ltform&gt<br>
+&ltinput type="password" name="Nombre" size="10" maxlength="10"&gt<br>
+&lt/form&gt<br><br>
+El cual se veria asi:<br><br>
+Por favor, introduce tu nombre:<br>
+<form>
+<input type="password" name="Nombre" size="10" maxlength="10">
+</form>
+La tercera forma de introducir un texto es a traves de la etiqueta &ltTEXTAREA&gt ...&lt/TEXTAREA&gt<br><br>
+EJEMPLO:<br><br>
+<TEXTAREA>
+ Aqui puedes escribir lo que te de la gana
+</TEXTAREA><br><br>
+Al igual que el anterior tambien se puede modificar su tamaño:<br><br>
+ROWS define el numero de filas que ocupará la caja de texto.<br><br> 
+COLS Columnas que ocupará la caja de texto <br><br>
+EJEMPLO:<br><br>
+&ltform&gt<br>
+Introduce la opinión que se merece este manual:&ltbr&gt<br>
+&lttextarea name="comentario" rows="8" cols="60"&gt<br>
+&lt/textarea&gt<br>
+&lt/form&gt<br><br>
+El cual se veria asi:<br><br>
+<form>
+Introduce la opinión que se merece este manual:<br>
+<textarea name="comentario" rows="8" cols="60">
+</textarea> 
+</form><br><br>
+<font color=blue><b>Elementos de Menu</b></font><br><br>
+Estos elementos le permitirán a nuestro visitante elegir entre varias  opciones, que han sido predeterminadas por nosotros. Esto lo podemos hacer de dos maneras. La primera es:<br><br>
+&ltINPUT NAME="Respuesta" TYPE=RADIO VALUE="mal"&gtmal<BR>
+&ltINPUT NAME="Respuesta" TYPE=RADIO VALUE="bien"&gtbien<BR>
+&ltINPUT NAME="Respuesta" TYPE=RADIO VALUE="nada"&gtnada<BR><br>
+El cual se veria asi:<br><br>
+<INPUT NAME="Respuesta" TYPE=RADIO VALUE="mal">mal<BR>
+<INPUT NAME="Respuesta" TYPE=RADIO VALUE="bien">bien<BR>
+<INPUT NAME="Respuesta" TYPE=RADIO VALUE="nada">nada<BR><br><br>
+Para asociar varios botones de radio a una misma variable les pondremos a todos ellos el mismo NAME. Aparte de esto acepta los siguientes parámetros:<br><br>
+<b>VALUE </b>Este es el valor que asignará a la variable. <br><br>
+<b>CHECKED </b>Si lo indicamos en una de las opciones esta será la que se active por defecto. <br><br>
+La  segunda forma es por medio de listas de selección.  Para emplearlas deberemos utilizar dos etiquetas, SELECT y OPTION. Veamos un ejemplo: <br><br>
+&ltSELECT NAME="Colores"&gt<br> 
+&ltOPTION VALUE="Rojo">Rojo<br> 
+&ltOPTION VALUE="Azul">Azul<br> 
+&ltOPTION VALUE="Verde">Verde<br> 
+&ltOPTION VALUE="Otros">Otros<br>
+&lt/SELECT&gt<br><br>
+El cual se veria asi:<br><br>
+<SELECT NAME="Colores"> 
+<OPTION VALUE="Rojo">Rojo 
+<OPTION VALUE="Azul">Azul 
+<OPTION VALUE="Verde">Verde 
+<OPTION VALUE="Otros">Otros 
+</SELECT><br><br>
+Explicacion:<br><br>
+<b>&ltselect name="Colores"&gt</b> Aquí definimos el nombre de la variable que contendrá la información. <br><br>
+<b>option</b> Con esta etiqueta definimos cuantas opciones consideremos necesarias. <br><br>
+<b>value</b> Sirve para definir que el usuario señalo esa opcion a la hora de que nosotros recibimos el formulario.<br><br> 
+<b>&lt/select&gt</b> Esta cierra la definición de este elemento del formulario. <br><br>
+Atributos de SELECT<br><br> 
+<b>SIZE</b> Indica el número de opciones que podremos ver. Si es mayor que 1 veremos una lista de selección y, si no, veremos una lista desplegable. <br><br>
+<b>MULTIPLE</b> Si lo indicamos podremos elegir más de una opción.<br><br> 
+Atributos de OPTION<br><br>  
+<b>VALUE</b> Este es el valor que asignará a la variable <br><br>
+<b>SELECTED</b> Si lo indicamos en una de las opciones esta será la seleccionada por defecto.Este atributo es utilizado cuando no queremos que aparesca la primera opcion selecionada. <br><br>
+<b><font color=blue>Elementos de confirmacion</font></b><br><br>
+Puede que yo solamente necesito que el usuario sencillamente me confirme o niegue algo. Lo podremos conseguir por medio de controles de confirmación:<br><br>
+&ltinput type="checkbox" name="nombre-variable"&gt<br><br> 
+Ejemplo:<br><br>
+&ltinput type="checkbox" name="hermoso"&gtSoy guapo<br><br> 
+El Cual se veria asi:<br><br>
+<input type="checkbox" name="guapo">Soy guapo <br><br>
+Por defecto esa casilla siempres va a aparecer desactiva si queremos activarla desde el principio utilizamos el valor <b>checked</b> <br><br>
+Ejemplo:<br><br>
+&ltinput type="checkbox" name="guapo" checked&gtSoy guapo<br><br> 
+El Cual se veria asi:<br><br>
+<input type="checkbox" name="guapo" checked>Soy guapo <br><br>
+<b><font color=blue>Botones </font></b><br><br>
+Existen dos tipos de botones : uno que se utiliza para mandar el formulario y otro que sirve para limpiar todo lo que haya rellenado el usuario en caso tal de que se equivoque.<br><br>
+Ejemplo:<br><br>
+&ltINPUT TYPE=SUBMIT&gt<br>
+&ltINPUT TYPE=RESET&gt<br><br>
+El cual se veria asi:<br><br>
+<INPUT TYPE=SUBMIT>
+<INPUT TYPE=RESET><br><br>
+Estos botones por si solo no cumplen ninguna funcion, habria que especificarles la URL a la cual queremos que lleguen esos datos. Supongamos que seria para nuestro correo electronico. Seria asi:<br><br>
+<form action="mailto:dirección de correo" method="post" enctype="text/plain">
+Desea usted recibir información sobre:<br><br>
+&ltform action="mailto:dirección de correo" method="post" enctype="text/plain"&gt<br>
+&ltinput type="radio" name="Información" value="sexo"&gtsexo.<br>
+&ltinput type="radio" name="Información" value=""&gtciencia<br>
+&ltinput type="radio" name="Información" value="humor"&gthumor<br>
+&ltinput type="submit" value="Enviar"&gt<br>
+&ltinput type="reset" value="Borrar"&gt<br><br>
+El cual se veria asi:<br><br>
+<form action="mailto:dirección de correo" method="post" enctype="text/plain">
+Desea usted recibir información sobre:<br><br>
+<input type="radio" name="Información" value="sexo">sexo.<br>
+<input type="radio" name="Información" value="ciencia">Internet.<br>
+<input type="radio" name="Información" value="humor">humor<br>
+<input type="submit" value="Enviar">
+<input type="reset" value="Borrar"><br><br>
+</form> 
+Explicacion:<br><br>
+<b>ACTION=URL</b><br> 
+Contiene la URL del programa CGI encargado de interpretar la entrada del suario y generar los resultados oportunos.<br><br> 
+<b>METHOD= GET / POST</b> 
+Tiene un significado. En principio puede tomar como valor cualquiera de los métodos de transferencia de datos reconocidos por HTTP, pero en la práctica sólo se emplean 2:<br><br> 
+<b>GET.</b> Añande los argumento del formulario al URL que se especifica en ACTION (usando como separador el símbolo ?), lo que da lugar a que el programa los reciba como párametros de entrada.<br><br>
+<b>POST.</b> Envía los datos como parte de la entrada estándar. <br><br>
+<b><font color=blue>Otros elementos</font></b><br><br>
+<b>TYPE=“hidden”</b><br><br> 
+Es simplemente un almacenamiento interno de datos. El visualizador no muestra el contenido, recogido en el atributo VALUE, pero sí se lo pasa al programa CGI. Resulta un componente muy adecuado para guardar información que se mantiene estable en la página (como un determinado valor que nos indica que los datos que provienen de esta página son los correctos y no otros de otra página distinta). Por ejemplo, si en un documento dado ha leido el nombre de usuarios, éste puede pasar de una página a otra a través de ete tipo de entrada, en vez de agrandar la lista de parámetros añadidos al URL. <br><br>
+&ltINPUT TYPE=“hidden” NAME=“browser” VALUE=“Arena”&gt <br><br>
+Este ejemplo, toma un valor oculto (hidden) en la variable browser, como valor “Arena”, que es un tipo de navegador que reconoce el HTML 3.0. <br><br>
+<b>TYPE=“image”</b><br><br> 
+Hace que el visualizador presente una imagen que es sensible al ratón. Lo que el formulario envía al servidor es un registro cuyos campos son el nombre definido para la imagen seguido de los parámetros .x=n .y=n donde n son los números de las coordenas x y del punto en el que estaba el ratón en el momento del envío. Para presentar la imagen se utiliza el atributo SRC del elemento IMG. Este sería un ejemplo de respuesta: <br><br>
+
+imagen.x=99&imagen.y=15<br><br> 
+
+Se escribe:<br><br> 
+
+&ltFORM METHOD="POST" ACTION="cgi-bin/mail.pl"&gt<br>
+&gtINPUT TYPE=IMAGE NAME="imagen" SRC="mail.gif"&gt<br>
+&lt/FORM&gt<br><br>
+
+Los formularios que utilicen este tipo de recursos pueden prescindir del tipo SUBMIT, ya que el formulario se cierra con la imagen.<br><br> 
+<br><center><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center>
+
+
+</FONT>
+</HTML>

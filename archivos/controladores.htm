@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>JavaScript</title>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<center>
+<h3><font color="blue">Controladores de eventos</h3></font>
+</center>
+Quien conozca algo de psicología sabrá algo de la teoría "estímulo- respuesta". Ella postula 
+-palabras más palabras menos- que cada individuo responde a una acción externa con una 
+determinada conducta. Si bien JavaScript no fue todavía objeto de estudios psicológicos 
+(aunque a veces uno quede "para el diván" después de tanto programar), el lenguaje universal 
+interactivo hace que tu sitio se comporte de acuerdo a esa teoría: <b>reaccionando ante un estímulo 
+del usuario</b>.
+<p>
+Gran parte de los objetos que conponen una página web, como los vínculos o los elementos de un 
+formulario, son <b>susceptibles a acciones</b> del usuario como <b>cliquear o pasar el mouse</b> sobre ellos o e
+scribir algo. Ante esos estímulos, cada elemento responde con una tarea específica. Por ejemplo, 
+un vínculo dispara el contacto con otra página web, mientras que un botón "<b>Submit</b>" envía a 
+destino un formulario.
+<p>
+Sin embargo, JavaScript puede hacer más sensible tu página personal y <b>ampliar la variedad de 
+estímulos</b> ante los que un objeto reacciona. La clave son ciertos códigos capaces de programar 
+respuestas a diferentes acciones del usuario. Se llaman controladores de eventos y la mejor 
+manera de emplearlos está explicada en las siguientes páginas.
+<p>
+<center>
+<h3><font color="blue"><a name=evento>Todo un evento</h3></font>
+</center>
+Para programar una respuesta ante una determinada acción del navegante sobre un objeto, 
+necesitas usar los <b>controladores de eventos</b> de JavaScript. Casi siempre, esa respuesta se 
+compone con una secuencia de acciones por lo tanto se la llama rutina.
+<p>
+Volviendo a los controladores de eventos, no son otra cosa que <b>códigos asociados</b> a etiquetas 
+HTML referidas a ciertas acciones ejecutadas por el usuario sobre un elemento. Así puedes 
+programar diversas <b>respuestas</b> para cada conducta de los navegantes sobre un objeto. ¿Necesitas 
+ejemplos? Bien aquí tienes dos:
+<p><center>
+     <table width="70%" border="0" cellspacing="2" cellpadding="0">
+        <tr> 
+           <td align="center" bgcolor="#FFEBD7"><font color="#6666FF"><u><font face="Verdana" size="2"><a onMouseOver="alert('¡No te me acerques!')"><b>Pasa 
+             el cursor aquí</b></a></font></u></font></td>
+           <td align="center" valign="middle" bgcolor="#FFEBD7"> <font color="#6666FF"><u><font face="Verdana" size="2" style=cursor:hand><a onClick="alert('¡Ni tampoco me toques!')"><b>Haz 
+            click aquí</b></a></font></u></font></td>
+        </tr>
+     </table>
+<p></center>
+Como acabas de comprobar, ambos elementos son un hipervínculo, pero responden con diferentes 
+acciones gracias a que se les han codificado eventos.
+<p>
+Aunque hay muchos controladores de <b>eventos</b>, poco más de diez son los más usados. Cada uno 
+<b>refiere a una acción que sirve de estímulo</b> y puede asociarse sólo a ciertas etiquetas HTML. 
+Por ejemplo, algunos entran en acción recién cuando un objeto obtiene foco (técnicamente, así 
+se llama al estado en que está un objeto disponible para ser seleccionado: un botón está en foco 
+cuando el contorno de un rectángulo negro se dibuja en su interior y avisa al usuario que está 
+listo para ser activado con la tecla Enter o el botón del mouse). Cliquea 
+<a onClick="window.open('tabla.htm','popup','width=520 height=425')">
+<font style=cursor:hand color=blue><u>aqui</u></font></a> para ver <b>una 
+lista de controladores más comúnes</b> y de los estímulos a los que responden.
+<p>
+Según el tipo de evento que quieras programar, un ejemplo de sintaxis podría ser el siguiente:
+<p><b>
+&ltINPUT TYPE="Button" VALUE="Aceptar" NAME="Botón1" <font color=red>onClick=<font color=blue>"MiFunción()"</font></font>> 
+<p></b>
+En este caso, al pulsar sobre el botón "<b>Aceptar</b>", se ejecutaría la rutina "<b<MiFunción()</b>", con 
+los procesos que hayan sido programados para ella.
+<p>
+Sigue leyendo para saber cómo poner en práctica los controladores de eventos.
+<p>
+<center>
+<h3><font color="blue"><a name=sensible>Tu pagina sensible</h3></font>
+</center>
+Manos a la obra. El primer evento que controles en tu sitio será el <b>paso del puntero del mouse 
+sobre un vinculo</b>. Es un efecto útil para brindar información al usuario. Mira el ejemplo: apoya 
+y quita el cursor sucesivas veces sobre el siguiente link y comprueba lo que aparece en la barra 
+de estado de la ventana, al pie de la página. 
+<p>
+<center>
+<a onMouseOver="window.status='¡Quitame el cursor de encima!'" onMouseOut="window.status='¡Gracias!'"><font face="Verdana" size="2" style=cursor:hand><b><font color="#6633FF"><u>Tengo 
+algo que decirte</u></font></b></font></a>
+</center>
+<p>
+Para crear este sencillo truco, se usan los eventos <b>onMouseOver</b> y <b<onMouseOut</b> para alterar la 
+propiedad "<b>Status</b>" del objeto Window. Fíjate en el código para saber cómo hacerlo.
+<p>
+<center><img src="state.gif"><br>
+<a onClick="window.open('imagen14.htm','popup','width=520 height=230')">
+<font face=Fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a></center>
+<p>
+Para crear este sencillo truco, se usan los eventos <b>onMouseOver</b> y <b>onMouseOut</b> para alterar la 
+propiedad "<b>Status</b>" del objeto Window. Fíjate en el código de arriba para saber cómo hacerlo.
+<p>
+Ahora prueba con otro controlador de evento capaz de dar un pequeño toque de distinción al 
+formulario de una página.
+<p>
+<form name="formulario2" onReset="alert('Los datos ingresados serán borrados')">
+        <p><b><font size="2" face="Verdana">Completa 
+          el formulario y pulsa Borrar</font></b></p>
+        <p><font face="Verdana" size="2"><b>Nombre:</b></font> 
+          <input type="text" name="cajatexto1" value="" size=40>
+        </p>
+        <b><font size="2" face="Verdana">Dirección:</font></b> 
+        <input type="text" name="cajatexto2" value="" size=20>
+        <b><font size="2" face="Verdana"> Código 
+        Postal:</font></b> 
+        <input type="text" name="cajatexto3" value="" size=8>
+        <br>
+        <p> 
+          <input type="button" value="Enviar" name="boton1">
+          <input type="reset" value="Borrar" name="boton2">
+        </p>
+      </form>
+<p>
+El código es muy sencillo: fíjate.
+<p>
+<center><img src="form.gif"><br> 
+<a onClick="window.open('imagen15.htm','popup','width=520 height=305')">
+<font face=fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a></center>
+<p>
+En este caso, se emplea el evento "<b>onReset</b>" para mostrar un cuadro que advierte que se ha 
+borrado la información ingresada. Lo ideal sería mostrar un cuadro de tipo "<b>Confirm</b>", para 
+que el usuario esté en condiciones de aceptar o cancelar la operación. Pero hacerlo, implicaría 
+el uso en el código de <b>estructuras de decisión</b>, y ese es un tema que trataremos en otro tema
+<p>
+<center>
+<a href="control.htm">Estructuras de control...</a>
+<p><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center> 
+
+
+

@@ -1,0 +1,42 @@
+<HTML>
+<HEAD><TITLE>MANUAL DE HTML</TITLE></HEAD>
+<FONT FACE= VERDANA>
+<body background="fondo.jpg" bgproperties=fixed>
+<font color=blue><b><h2>Videos</h2></b></font>
+El formato de vídeo utilizado es el AVI de Windows, que como es sabido, incluye imágenes y sonido digitales.<br><br> 
+El mayor problema de los ficheros digitales de vídeo es el gran tamaño de los mismos, ya que en la práctica unos pocos segundos de vídeo con sonido puede representar un fichero de varios Mb. (mega bytes), en realidad es como si se trataran dos ficheros separados, uno con el sonido y otro con las imágenes, pero sincronizados. No hay que confundir este formato AVI con el MPEG, que también puede integrar imágenes y sonido, aunque con un nivel de compresión diferente, y peor sincronización con el sonido. Habitualmente los ficheros .MPG se suelen encontrar sin sonido. <br><br>
+Al utilizar estos videos en nuestra pagina debemos tener cuidado porque como se explico anteriormente son de gran tamaño, lo cual puede hacer que nuestra pagina se demore mucho en abrirse lo que puede ocasionar que el visitante se desepere y se salga de nuestra pagina<br><br>
+Los conocimientos que teniamos hasta el momento no nos permitain manejar elementos de multimedia, solo nos permitian insertar imagenes, colocar un ancla, darle color al fondo,ec. Pero en estos momentos comenzaremos a manejar el concepto de multimedia y Plug-ins(Son programas que  permiten tratar diversos tipos de ficheros, de esta forma podrá insertarse estos tipos de ficheros dentro de una página HTML, permitiendo mostrar vídeo en distintos formatos (mpeg, avi, mov), interpretar sonido, en varios formatos (au, mid,), incluir ficheros de Adobe Acrobat (pdf), mostrar ficheros VRML, etc... )<br><br>
+La etiqueta utilizada para insertar un video en tu WEB es  <b>EMBED</b>> y va acompañada de un atributo fundamental "SCR", que indica la ruta donde se encuentra el archivo que contiene el video a  insertar. <br><br>
+<b>EJEMPLO:</b><br><br>
+&ltEMBED SRC="www.geocities.com/hazeksite/video.avi"&gt<br><br>
+<center><EMBED SRC="video.avi"></center><br><br>
+<b><font color="blue">ATRIBUTOS</font></b><br><br>
+<b>AUTOSTART:</b> Este atributo posee dos valores posibles: TRUE y FALSE(por defecto). El primero sirve para que el video se cargue junto con la pagina, es decir, apenas se abre la pagina comienza a abrirse. El segundo valor es para que el visitante al hacer click sobre el video lo active.<br><br>
+<b>LOOP:</b>Al ingles traduce  lazo. Este atributo al igual que el anterior tanbien posee dos valores: FALSE (por defecto) y TRUE, el primero hace que el video se repita una solo vez, y el segundo hace que el video se repita infinitas veces<br><br> 
+<b>HEIGHT y WIDTH:</b> Estos atributos son utilizados para definir el alto y el ancho del video respectivamente. A la hora de utilizar estos valores se debemos tener mucho cuidado ya que si los valores no coinciden con los de las dimenciones del video este sera recortado<br><br>
+<b>ALING:</b>Este atributo no lo voy a explicar porque funciona igual que en las imagenes, no funciona sobre el video sino sobre su alineacion con el texto en la pagina.<br><br>
+<center><img src="color.gif" width="400" height="1"></center><br><br>
+<font color=blue><b><h2>Sonidos</h2></b></font>
+Una página Web puede tener sonidos incorporados, bien sea como un fondo sonoro(se ejecuta automáticamente al cargar la página), o como una opción para que el visitante la active.<br><br>
+El Internet Explorer  está mejor adaptado para el sonido, pues a partir su versión 2.0 fue capaz de reproducir fondos sonoros sin necesidad de añadir nada, y no hay ninguna complicación con los servidores, como  con el Netscape. Además, a partir su versión 3.0, es compatible con los plug-ins del Netscape.
+El archivo de sonido puede ser un MIDI(musical instrument digital interface) o un .WAV(waveform audio)<br><br>
+<b>1. MICROSOFT EXPLORER:</b><br><br>
+ Se utiliza la etiqueta &ltBGSOUND&gt acompañada de su atributo principal que es el SRC.<br><br>
+<b>ATRIBUTOS:</b><br><br>
+<b> LOOP</b>Sirve para especificar el número (n) de veces que se debe ejecutar el fichero de sonido. Si se escoje el número n=-1 o se pone LOOP=infinite, el sonido se ejecutará indefinidamente. El valor por defecto de este es 1, es decir, se repite una sola vez. Si yo quiero que se repita infinito numero de veces se le coloca INFINITE<br><br>
+<b>2.NETSCAPE NAVIGATOR.</b><br><br>
+La etiqueta que debemos emplear en Netscape es &ltEMBED&gt, que como cosa rara debe ir  acompañada de su atributo principal que es el SRC, para indicar la direccion de donde se encuentra.<br><br>
+<b>ATRIBUTOS:</b><br><br>
+<b>LOOP:</b> Con este atributo se indica que, el sonido de fondo se debe reproducir continuamente.Al igual que los videos puede tomar el valor de FALSE y TRUE<br><br> 
+<b>AUTOSTART:</b>Tambien posee los mismos valores que el anterior. Con el TRUE arranca cuando se este cargando la pagina y con el FALSE no.<br><br> 
+<b>VOLUME="n".</b> Con esta directiva controlamos el volumen de sonido.n es un numero entero de 1 a 100.El valor por defecto de este atributo es 50.Pero este tambien se puede cambiar manualmente. <br><br>
+<b>WIDTH="n".</b> Es el ancho en pixels de la consola que aparece y que tiene diversas teclas, stop, play, etc.<br><br> 
+<b>HEIGHT="n".</b> Es el alto en pixels de la consola que aparece. Dependiendo del plug-in que se tenga tenemos el problema que las dimensiones de consola son diferentes por lo que habrá ocasiones en que se vean zonas en blanco.<br><br>
+<b>CONTROLS="smallconsole".</b> Visualiza los controles para la reproducción.<br><br>
+<b>HIDDEN="true".</b> Con este atributo ocultamos la consola, pero tambien se deben definir sus dimensiones<br><br>
+<b>STARTTIME=mm:ss y ENDTIME=mm:ss</b>Este atributo es utilizado para activar la consola despues de cierto tiempo. mm son los minuto y ss son los segundo. Para que esto  funcione se deben tener dos digitos<br><br>
+<b>ALING:</b>Este atributo es igual que al de los videos<br><br>
+<br><center><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center>
+</FONT>
+</HTML>

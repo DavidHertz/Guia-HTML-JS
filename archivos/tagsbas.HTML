@@ -1,0 +1,81 @@
+<HTML>
+<HEAD>
+<TITLE>MANUAL DE HTML</TITLE>
+</HEAD>
+<body background="fondo.jpg" bgproperties=fixed>
+<font face="verdana">
+<b> <h3><font color= "blue"><A NAME="&ltHTML&gt"> &ltHTML&gt</a></font></h3></b>
+Todo documento elaborado en HTML debe constar de cuatro partes principales:<br><br>
+<center><img src= "html.gif"></center><br><br>
+Todo el contenido de un documento HTML debe encontrarse englobado en el interior de la directiva cerrada &ltHTML/&gt...&lt/HTML&gt. Esto le indica al navegador que estamos empleando que todo lo que se encuentra entre estas dos etiquetas, es código HTML y que debe ser interpretado como tal.<br><br> 
+
+La directiva  &ltHTML/&gt...&lt/HTML&gt. contiene en su interior 2 bloques: &ltHEAD/&gt...&lt/HEAD&gt. que es la directiva que señala la cabecera del documento, dentro de esta etiqueta se encuentra &ltTITLE/&gt...&lt/TITLE&gt.que contiene el titulo del documento (este titulo unicamente se vera en la parte superior del navegador) y por ultimo , &ltBODY/&gt...&lt/BODY&gt., que contiene el cuerpo del documento o para entendernos lo que visualizamos en el navegador con el formato correspondiente. En resumen un fichero de HTML sería de la forma: 
+<p><center><img src="color.gif" width="400" height="1"></center>
+<b> <h3><font color= "blue"><A NAME="&ltHEAD&gt"> &ltHEAD&gt</a></font></h3></b>  
+Esta cabecera contiene esencialmente información del documento. Entre esta directiva podremos poner otras directivas apartes del titulo como lo son:<br><br>
+&ltBASE&gt<br><br> Esta directiva indica la localización de los ficheros, gráficos, sonidos, etc... a los que se hace referencia en nuestra página Web. Si no se incluye esta directiva el visor entiende que dichos elementos se encuentran en el mismo lugar donde se encuentra nuestra página Web. Esta etiqueta se utiliza mas que todo cuando el servidor en el que tenemos nuestra pagina no nos da abasto entonces optamos por mandar nustros archivo a otro servidor.<br><br>
+EJEMPLO:<br><br>
+<center>&ltBASE href ="www.geocities.com/hazeksite/video.AVI"&gt</center> <br><br>
+&ltISINDEX&gt<br><br>  
+Indica que el documento es un índice, y por tanto se deberá realizar una búsqueda en él. Presentará un indicador preguntando la palabra clave de la búsqueda.<br><br> 
+No se utiliza en documentos normales, sino en documentos realizados con cgi-bin para indicar que les debe pasar una palabra clave para realizar la búsqueda. Presenta dos atributos, PROMPT que indica el texto que aparecerá como inductor de la búsqueda y ACTION que especifica el fichero cgi que trata la consulta, por defecto será el documento actual. <br><br>
+Atributos de la extensión del HTML: <br><br>
+PROMPT (solamente visualizable con Netscape): permite cambiar el texto previo a la entrada de usuario. Si no se incluye, el visor incorpora automáticamente una sentencia de inicio. <br>
+HREF: da la URL del archivo donde está la rutina para la respuesta.<br> 
+ACTION: da la URL base hacia donde se dirige la búsqueda del usuario, es decir, la aplicación que ejecutará la respuesta.<br>
+<font face=verdana><br>EJEMPLO:<br><br>
+&lthead&gt<br>
+&ltisindex prompt="si desea saber algo más sobre el tutorial, ingrese una palabra"&gt<br>
+&lt/head&gt<br><br>
+<center><img src="color.gif" width="400" height="1"></center>
+<b> <h3><font color= "blue"><A NAME="&ltBODY&gt"> &ltBODY&gt</a></font></h3></b><br>
+Esta directiva  indica el inicio y final de nuestra pagina Web. Será entre el inicio y el final de esta directiva donde pongamos los contenidos de nuestra página, textos, gráficos, enlaces, etc.... Esta directiva tiene una serie de parámetros opcionales que nos permiten indicar la "apariencia" global del documento :<br><br>
+<b>background=</b> "nombre de fichero grafico" 
+Indica el nombre de un fichero gráfico que servirá como "fondo" de nuestra página. Si la imagen no rellena todo el fondo del documento, esta sera reproducida tantas veces como sea necesario.Esta etiqueta  posee un atributo llamado  <b>FIXED</b> el cual hace que el fondo no se mueva junto con las letras<br><br>
+<b>bgcolor</b> = "codigo de color"<br>
+Indica un color para el fondo de nuestro documento. Se ignora si se ha usado el parámetro background.<br><br>
+<b>text =</b> "codigo de color"<br>
+Indica un color para el texto que incluyamos en nuestro documento. Por defecto es negro.<br><br>
+<b>link =</b> "codigo de color"<br>
+Indica el color de los textos que dan acceso a un Hyperenlace. Por defecto es azul.<br><br>
+<b>vlink =</b> "codigo de color"<br>
+Indica el color de los textos que dan acceso a un Hyperenlace que ya hemos visitado con nuestro visor. Por defecto es purpura.<br><br>
+<b>Lang =</b> para indicar el idioma del texto. <br><br>
+"en": inglés<br>
+"fr": francés<br>
+"de": alemán<br>
+"es": español<br>
+"pt": portugués<br>
+"zh": chino<br><br>
+<b>ONMOUSEDOWN =</b> es un atributo definido como un "evento intrínseco". Este evento o suceso está definido por el valor del atributo, que es un pequeño programa script (JavaScript, VBScript o Tcl). En este caso, el suceso ocurre cuando se presiona un botón sobre un elemento. (HTML 4.0).<br><br>
+<b>ONMOUSEOVER =</b> es un atributo definido como un "evento intrínseco". Este evento o suceso está definido por el valor del atributo, que es un pequeño programa script (JavaScript, VBScript o Tcl). En este caso, el suceso ocurre cuando la flecha señalizadora se mueve sobre un elemento. (HTML 4.0). <br><br>
+<center><img src="color.gif" width="400" height="1"></center><font face=verdana>
+<b> <h3><font color= "blue"><A NAME="ETIQUETAS META">ETIQUETAS META</a></font></h3></b>
+Son usadas para poner meta-informacion de el documento. Esta directiva indica al visor de Internet las palabras clave y contenido de nuestra página Web. Muchos de los buscadores de páginas Web de Internet (Yahoo, Lycos, etc...) utilizan el contenido de esta directiva para incluir la página en sus bases de datos. La directiva &ltMETA&gt varios parámetros:<br><br>
+EJEMPLO<br><br> 
+&ltMETA name = "Pagina de David Hdz"content = "Mi pagina personal, HTML y Javascript"&gt<br> 
+Indica al visor el nombre de la página y sus contenidos principales.<br>
+&ltMETA NAME="Author" content="David Hdz - TEAM"&gt <br>
+Indica el nombre de la persona que elabora la pagina WEB<br>
+&ltMETA name = "keywords"content = "Completo manual de HTML"&gt<br> 
+Indica al visor las palabras clave para los buscadores de Internet. <br><br>
+Otro uso de la directiva &ltMETA&gt es la de indicar documentos con "refresco automático". Si se indica una URL se sustituirá el documento por el indicado una vez transcurridos el número de segundos especificados. Si no se incluye ninguna URL se volverá a cargar en el visor el documento en uso transcurridos los segundos indicados. Esto es util para páginas que cambian de contenido con mucha frecuencia o para redireccionar a la persona que visita nuestra pagina Web a una nueva dirección donde se encuentra una versión actualizada de nuestra pagina Web.<br><br>
+EJEMPLO :<br><br> 
+&ltMETA http-equiv= "refresh"content = "15;  URL=http://www.microsoft.com"> <br> 
+Transcurridos 15 segundos se accederá a la pagina Web de Microsoft.<br><br>
+<b>Url=</b> es un atributo agregado por Netscape, y sólo puede visualizarse con este visor. Da la ubicación de un documento dinámico. <br><br>
+<b>Scheme=</b> permite ingresar una forma del contenido del atributo, cuando es el caso de varias opciones. <br><br>
+<b>Dir=</b> para indicar dirección del texto.<br> 
+</font><br><br>
+EJEMPLO:<br><br>
+&ltHTML&gt<br>
+&ltHEAD&gt<br> 
+            &lt TITLE&gt Mi primera pagina &lt/TITLE&gt<br>
+&ltMETA NAME="keywords" CONTENT="entretenimieto"&gt<br>
+&ltMETA NAME="description" CONTENT="Esta es mi primera pagina elaborada en HTML"&gt<br>
+&ltMETA NAME="Author" content="David Hdz - TEAM"&gt<br>
+&lt/HEAD&gt<br>
+&ltBODY BGCOLOR = navy&gt<br>
+&lth1&gtAQUI PUEDES ESCRIBIR LO QUE TE DE LA GANA&lt/h1&gt<br>
+&lt/HTML&gt
+<br><center><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center>

@@ -1,0 +1,156 @@
+<html>
+<head>
+<title>Java script</title>
+<script language="javascript"> function adivina(){
+mensaje=ins.box.value;
+alert("Tu escribiste "+mensaje);
+}
+</script>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<center>
+<h3><font color="blue">Elementos Teoricos</h3></font>
+</center>
+Sí leíste desde el principio este curso de JavaScript, ya conoces los elementos básicos de 
+JavaScript. Sabemos incorporarlo a nuestra página web y hasta cómo evitar errores de 
+visualización en usuarios que no poseen un navegador con soporte para este lenguaje. 
+Pero todavía hay mucho camino por recorrer.<br><br>
+
+Todo lenguaje tiene una base teórica cuyo conocimiento es indispensable para aprovechar todos 
+sus recursos. JavaScript no es la excepción y posee numerosas funciones, códigos, sentencias y 
+elementos que forman su columna vertebral.<br><br> 
+En esta guia verás algunos de los conceptos que integran los cimientos de JavaScript.<br><br>
+
+Las <b>variables</b> y los <b>operadores</b> son los más importantes. Por sí solos no ejecutan 
+ninguna función, pero constituyen el ingrediente que le dará vida a los programas de 
+JavaScript. Si no sabes qué es una variable, tu sitio no podrá recibir datos de los 
+usuarios y actuar en consecuencia. ¿Un ejemplo? Bien: las variables son necesarias para 
+que tu sitio cambie de color de acuerdo al sexo de los usuarios. Así, los visitantes que 
+escriban la letra F de femenino en una casilla, verán como el color de fondo de tu sitio 
+se torna rosado y quienes tipeen la M de masculino la verán celeste.<br><br>
+
+Tareas similares,pero de mayor complejidad se ejecutan con los <b>operadores</b>, ya sea 
+para realizar cálculos matemáticos o para unir datos que formen una <b>expresión</b>.<br><br>
+
+Pero, basta de rodeos. <b>Continúa leyendo</b>, porque, aunque suene contradictorio, la mejor 
+forma de aprender teoría es a través de la práctica.<br><br>
+
+<center>
+<h3><font color="blue"><a name="variable">¿Que es una variable?</h3></font>
+</center>
+Uno de los elementos más difíciles de entender de todo lenguaje son las <b>variables</b>. 
+Qué son, para qué sirven y cómo utilizarlas correctamente son las dudas que surgen casi 
+siempre. Y todo porque es un concepto un tanto abstracto, pero las cosas se aclaran 
+bastante cuando se baja a la tierra.
+<br><br>
+Variable es el nombre que se le da al <b>lugar donde guardamos una información determinada</b>. 
+Imagina a una variable como el cajón de un mueble donde sueles guardar ciertos elementos. 
+El contenido de esa variable te servirá para ser usado o modificado por alguna función que 
+crees en el programa.
+<br><br>
+En JavaScript, las variables <b>deben comenzar con una letra</b> o un <b>guión bajo</b> (<b>_</b>), 
+<b>pueden tener dígitos</b> entre sus demás caracteres pero no espacios. Y a diferencia de otros 
+lenguajes, <b>no es necesario definir el tipo de variable</b>, es decir, la clase de información que guarda.
+<br><br>
+Los contenidos de una variable (tambien llamados "<b>literales</b>") pueden ser números enteros, 
+decimales, textos, valores "<b>lógicos</b>" (del tipo "<b>Verdadero</b>" o "<b>Falso</b>"), e incluso objetos, 
+y no hace falta identificarlos de alguna forma porque JavaScript se encarga de reconocerlos 
+automáticamente.<br><br>
+
+<b>Tampoco es necesario presentar las variables</b> dentro del código (algo que en la jerga se llama 
+<b>declarar</b>), pero puede hacerse con la palabra reservada <b>var</b>. Estas son, entonces, las dos formas 
+de declarar un variable:<br><br>
+
+<b>var nombre;<br><br>
+
+nombre = contenido;</b><br><br>
+
+o bien directamente:<br><br>
+
+<b>nombre = contenido;</b><br><br> 
+
+También se puede declarar varias variables en una misma sentencia <b>separándolas con comas</b> 
+(<b>,</b>) así:<br><br>
+
+<b>var nombre1, nombre2, nombre3;</b><br><br>
+
+<center>
+<h3><font color="blue"><a name="ambito">El ámbito de la variable</h3></font>
+</center>
+
+Todas las variables, declaradas o no, son de <b>ámbito global</b>. Esto significa que pueden ser 
+"<b>vistas</b>" y utilizadas por todos los procedimientos del programa. Pero si se declara una 
+variable dentro de una función, pasa a ser <b>local</b> y es de uso exclusivo de esa función. 
+Veamos un ejemplo para entender mejor:<br><br>
+<center>
+<img src="variable.gif">
+</center>
+<br><br>
+En este caso, todas las variables son globales a excepción de <b>VARIABLE3</b>, porque fue declarada 
+dentro de una función. Como seguramente te estarás preguntando qué es una <b>función</b>, hay que 
+aclarar que se trata de un <b>conjunto de órdenes para realizar una cierta tarea</b>. Más adelante, 
+las conocerás en detalle. Por ahora, apenas necesitas saber qué es una función para evitar 
+confusiones.
+<br><br>
+<center>
+<h3><font color="blue">Uso y abuso de variables</h3></font>
+</center>
+Ya sabes lo suficiente sobre variables, pero aún no tienes una muestra de su verdadera 
+utilidad. El siguiente script, te ayudará a resolver muchas dudas.<br><br>
+<center>
+<img src="variable2.gif">
+</center>
+<br><br>
+En tu browser, esto se verá así:<br><br>
+
+<b>Pedro tiene 20 años y vive en Bs.As. </b>(Buenos Aires)
+<br><br>
+ 
+El ejemplo es muy rudimentario, pero brinda pistas sobre el funcionamiento de las variables. 
+Recuerda que son espacios para guardar los datos y en el script se ve que <b>variable1</b> 
+almacena la edad de Pedro, mientras que <b>variable2</b> guarda la ciudad donde vive. 
+<br><br>
+Fíjate que la diferencia entre el contenido de ambas variables está dada por el <b>uso de las 
+comillas</b> (<b>""</b>) en "<b>Buenos Aires</b>", porque se trata de un texto y no de un número. Si obviáras 
+estos signos, tu programa provocaría un error.<br><br>
+
+Luego, el script apela a la sentencia <b>document.write</b> para unir, mediante el símbolo <b>más</b> 
+(<b>+</b>), el valor de las variables con el resto del texto. ¿Sencillo no?.<br><br>
+
+Por supuesto, las variables no se usan para hacer esta clase de tareas que podrían resolverse 
+más fácilmente con sólo apelar al <b>HTML</b>. Para que tengas una mejor idea de sus posibilidades, 
+prueba el siguiente ejemplo:
+<br><br>
+<center>
+<table border=5 cellpadding=0 cellspacing=0>
+<tr>
+<td bgcolor="ecfcff" align="center">
+<font face=verdana size=2>Escribe algo y JavaScript lo adivinara:</td>
+</tr>
+<tr> 
+<td width=300 align="center"><br>
+<form name="ins">
+<input type="text" name="box" value="">
+<input type="button" name="boton" value="Adivina" onClick="adivina()">
+</form>
+</td>
+</tr>
+</table>
+</center>
+<br>
+No es conveniente que veas el código de este script, porque utiliza elementos que todavia 
+no se explicaron. Pero si comprendiste el uso de variables entenderás cómo hace el programa 
+para adivinar lo que escribes. Es simple: usa una función con una variable que almacena el 
+contenido del cuadro de texto, y luego el botón "<b>llama</b>" a esa rutina y muestra el resultado 
+en un cuadro llamado <b>alert</b>.
+<br><br>
+<center>
+<a href="operadores.htm">Operadores...</a>
+<br><br>
+<font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center> 
+
+
+
+

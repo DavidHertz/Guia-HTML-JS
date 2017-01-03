@@ -1,0 +1,120 @@
+<HTML>
+<FONT FACE = VERDANA>
+<body background="fondo.jpg" bgproperties=fixed>
+<H2><FONT COLOR="BLUE">Como Crear un Frame</A></FONT></H2>
+Para crear un frame se utiliza la etiqueta &ltFRAME&gt y &lt/FRAME&gt. Un  frame es la división de la pantalla en varias zonas o ventanas que pueden actuar de forma independiente las unas de las otras. Los navegadores que reconocen las etiquetas para realizar frames son Netscape y Explorer 2.0 y en adelante. A continuación vamos a ver como definir frames o ventanas y las peculiaridades que hay que tener en cuenta a la hora de cargar nuestras páginas en cada uno de ellos. <br><br>
+<ul>
+<li>&lt frames cols="30%,70%"&gt Esta etiqueta divide la pantalla en dos columnas que actuan como ventanas. Una de ellas ocupará el 30% de la pantalla y la otra ocupará el 70% de la pantalla. </li>
+<li>&lt frames rows="30%,70%"&gt Con esto dividiríamos la pantalla en filas en la misma proporción anterior. </li>
+<li>&lt frames cols="40,600"&gt  La ventana de la izquierda ocupará 40 pixels y la de la derecha 600.</li> 
+<li>&lt frameset rows="80,400"&gt La ventana superior ocupará 80 pixels y la ventana inferior 400. </li>
+<li>&ltframeset rows="20,100,*"&gt Habrá 3 ventanas. La primera tendrá 20 puntos, las segunda 100 y la tercera el resto de la pantalla. </li>
+<li>&lt frameset cols="2*,*" &gt Dividiría la pantalla en tres partes y la primera columna ocuparía dos tercios de la pantalla. </li>
+<li>&lt framaset rows="*,3*"&gt Divide la pantalla verticalmente en 2 partes. La primera fila obtendría un cuarto de espacio de la pantalla mientras que la segunda fila obtendría los otros tres cuartos restantes. </li>
+<li>&lt frame src="documento.htm"&gt Con esta etiqueta indicamos que documento se va a cargar en cada ventana.  </li>
+</ul>
+Veamos un ejemplo:<br><br>
+&ltHTML&gt<br>
+   &ltHEAD&gt<br>
+	&ltTITLE&gt FRAMES &lt/TITLE&gt<br>
+   &lt/HEAD&gt<br>
+   &ltFRAMESET COLS="25%, 75%"&gt<br>
+   &ltFRAME SRC="derecha.html"&gt<br>
+   &ltFRAME SRC="izquierda.html" NAME="principal"&gt<br>
+   &lt/FRAMESET&gt<br>
+&lt/HTML&gt<br><br>
+
+<FONT COLOR="BLUE"><b>Como insertar el contenido</b></FONT><br><br>
+Una vez que tenemos el frame principal hecho el sigiente paso seria introducir el contenido en el,  lo cual se hace de la siguiente manera:<br><br>
+1. Debemos crear un nuevo archivo en el editor que estemos utilizando y lo guardamos con el nombre de izquierda.html (o el nombre que uno quiera pero siempre y cuando coordine con el que pusimo en el ejemplo anterior  &ltFRAME SRC="derecha.html"&gt, suponiendo que lo se guardo como der.html. Dentro de este marco yo puedo utilizar todos los elementos que hemos vistos anteriormente.<br><br>
+EJEMPLO:<br><br>
+&lthtml&gt<br>
+&lthead&gt<br>
+&ltTITLE&gtEjemplos Con Frames&lt/TITLE&gt<br>
+&lt/head&gt<br>
+&ltBODY BGCOLOR="000000"&gt<br>
+&lth1&gt &ltfont color=red&gtEste es el marco que me servira como portada&lt/font&gt &lt/h1&gt<br>
+&lt/html&gt<br><br>
+2. Debemos crear otro archivo y colocarle el nombre que uno quiera, para este caso se llamara izquierda.html<br><br>
+EJEMPLO:<br><br>
+&lthtml&gt<br>
+&ltBODY BGCOLOR="navy"&gt<br>   
+&lt/html&gt<br><br>
+<FORM ACTION="ejemplo1.html"  TARGET="_blank">
+<INPUT TYPE="SUBMIT" VALUE="Ver ejemplo"><br><br>
+<b><font color=blue>Navegadores que no soportan frame</font></b><br><br>
+&ltHTML&gt<br>
+   &ltHEAD&gt<br>
+	&ltTITLE&gt FRAMES &lt/TITLE&gt<br>
+   &lt/HEAD&gt<br><br>
+
+   &ltFRAMESET COLS="25%, 75%"&gt<br>
+   &ltFRAME SRC="izquierda.html"&gt<br>
+   &ltFRAME SRC="derecha1.html"&gt<br>
+   &lt/FRAMESET&gt<br>
+   &ltNOFRAMES&gt<br>
+Lo siento, tu navegador no soporta frame<br>
+debes actualizarte<br>
+   &lt/NOFRAMES&gt<br>
+&lt/HTML&gt<br><br>
+El algoritmo elaborado anteriormente funciona tanto para navegadores que soportan FRAMES como para aquellos que no.<br>
+&ltNOFRAMES&gt...&lt/NOFRAMES&gt, dentro de estas etiquetas se escribe el mensaje que uno quiere que aparesca al momento de entrar un usuario cuyo navegador no acepta FRAMES. Es como una forma de validacion.<br><br>
+Dentro de las etiquetas <b>&ltNOFRAMES&gt...&lt/NOFRAMES&gt</b> tambien podemos colocar el contenido de los dos frames que definimos, de manera que cuando una persona cuyo navegador no acepte frames entre,  le sea totalmente transparente.<br><br>
+<font color=blue><b>ATRIBUTOS</b></font><br><br>
+<b><font color=blue>NAME</font></b><br><br> 
+Indica el nombre de la frame, este nombre es importante ya que se usará en los hiperenlaces (normalmente en los documentos de las otras frames) para indicar la frame de destino del documento. Si no se indica el nombre solo se podrá mostrar el documento actual, sin que sea posible cambiarlo mediante hiperenlaces. <br><br>
+<b>_blank<br> 
+Siempre carga en una nueva ventana, sin nombre.<br> 
+_self <br>
+Siempre carga esta ventana sobre la del usuario. <br>
+_parent <br>
+Siempre carga esta ventana sobre su padre o sobre la del usuario si no hay padre definido.<br> 
+_top <br>
+Siempre carga esta ventana en el nivel mas alto o sobre la del usuario si estas en el nivel superior.</b><br><br> 
+
+<b> <font color=blue>ROWS</font></b><br><br>
+Este atributo es utilizado cuando queremos hacer un corte horizontal y no uno vertical. En ese caso, lo unico que deberiamos cambiar seria el  atributo  COLS de la etiqueta <b>&ltFRAMESET&gt</b> por dicho atributo. El resto seria  igual:<br><br>
+
+&ltHTML&gt<br>
+  &ltHEAD&gt<br>
+    &ltTITLE&gt FRAMES &lt/TITLE&gt<br>
+   &lt/HEAD&gt<br>
+   &ltFRAMESET ROWS="30%, 70%"&gt<br>
+   &ltFRAME SRC="arriba.html"&gt<br>
+   &ltFRAME SRC="abajo.html"&gt<br>
+   &lt/FRAMESET&gt<br>
+&lt/HTML&gt<br><br>
+<a href="ejemplo2.html" target="ejemplo2.html">Pulsa para ver un ejemplo</a><br><br>
+
+<b><font color=blue>MARGINWIDTH y MARGINHEIGHT</font></b><br><br>
+El  primer  atributo nos permite controlar la cantidad de espacio horizontal entre los contenidos y las paredes del marco. El valor mínimo permitido es 1. El segundo atributo nos permite controlar el espacio vertical entre los contenidos y los márgenes superior e inferior.<br><br>
+EJEMPLO:<br><br>
+
+&ltFRAMESET COLS="30%, 70%"*&gt<br>
+&ltFRAME MARGINHEIGHT="30" SRC="izquierda.html"&gt<br>
+&ltFRAME MARGINHEIGHT="30" MARGINWIDHT="50" SRC="derecha.html"&gt<br>
+&lt/FRAMESET&gt<br><br> 
+
+<font color=blue><b>NORESIZE</b></font><br><br> 
+
+El usuario puede tomar el borde del  marco con el mouse y moverlo a su gusto. Para que esto no ocurra  utiliza este atributo que al ingles traduce NO-RESIZE "sin cambiar el tamaño"). Hay que saber usar este atributo ya que todas las personas que visitan nustra pagina WEB no tienen configurado su monitor a la misma resolucion.<br><br>
+
+<b><font color=blue>SCROLLING</font></b><br><br>
+Este atributo es utilizado para indicar si el frame tendrá o no una barra de scroll, la barra de scroll se muestra en el lateral y permite desplazarse por el documento, pulsando con el ratón en ella. Si toma el valor YES, siempre se mostrará esta barra, para el valor AUTO solo se mostrará si el documento no cabe en la frame, si es necesaria. Y por último NO indica que en ningún caso se muestre la barra de scroll. Si no se indica nada se toma por defecto el valor AUTO. <br><br>
+&ltFRAMESET COLS="25%, 75%"&gt<br>
+&ltFRAME SCROLLING=YES SRC="izquierda.html"&gt<br>
+&ltFRAME SCROLLING=NO SRC="derecha.html"&gt<br>
+&lt/FRAMESET&gt <br><br>
+<font color=blue><b> TARGET</b></font><br><br>
+Este atributo es usado para hacer que el resultado de un enlace se origine en otro frame de la misma ventana, pondriamos TARGET=nombre, siendo "nombre" el nombre de un segundo frame. Pero hay que tener cuidado al utilizarlo ya que no se pueden utilizar nombres reservados<br><br>
+_self<br>
+Hace que el enlace se cargue en el propio frame. (default) <br>
+blank<br>
+Hace que se abra una nueva ventana y el enlace activado se carga en ella, a pantalla completa. <br>
+_top<br>
+Hace que el enlace se cargue a pantalla completa, suprimiendo todos los frames, pero sin que se cargue una nueva ventana.<br> 
+<br>
+<center><font face=verdana size=2>
+Copyright© 2002 Hazek Web Site®</center>
+</FONT>
+</HTML>

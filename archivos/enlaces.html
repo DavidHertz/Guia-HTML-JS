@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<TITLE>MANUAL DE HTML</TITLE>
+</HEAD>
+<FONT FACE=VERDANA>
+<b><h2><font color=blue>ENLACES</font></h2></b>
+<body background="fondo.jpg" bgproperties=fixed>
+Un enlace es una zona de texto o gráficos que si son seleccionados nos trasladan a otro documento de hipertexto o a otra posición dentro del documento actual. Siendo HTML el lenguaje de Internet, la diferencia que posee con respecto a otros tipos de hipertexto es que ese otro documento puede estar físicamente en la otra punta del planeta. Son los enlaces los que han  contribuido en una mayor parte al desarrollo de internet.<br><br> 
+Los links o enlaces nos permiten leer un documento de forma no secuencial, saltando de una parte a otra según nos interese.<br><br>
+A los enlaces tambiens se les conoce con el nombre de "link" o de "Anclas".  Un link o ancla es un área de la pantalla, que puede contener una o varias palabras o una imagen, que es "sensible" al puntero del ratón, y al ponerlo sobre ella y pulsar el botón izquierdo el visualizador llamará a la página que tiene asignada el link. <br><br>
+Todo esto lo consigue el elemento <A> (por Anchor, en inglés = ancla o punto de anclaje).<br><br>
+Existen tres tipos importantes de enlaces: <br><br>
+
+1.Enlaces dentro de la misma página.<br> 
+2.Enlaces a  nuestra direccion de correo.<br> 
+3.Enlaces a una página fuera de nuestro sistema.<br><br> 
+
+
+<font color=blue><b>Enlaces dentro de la misma pagina</b></font><br><br>
+Este tipo de enlaces tambien es conocido como navegacion interna. Cuando una página contiene mucha información, es oportuno y hasta necesario establecer vínculos dentro de la misma página, para que el usuario encuentre la información que desea lo más rápido posible, en un solo clic. Este tipo de enlace se da cuando no queremos leer una pagina de forma secuencial, sino que la queremos leer por pedazos.<br><br>
+El punto de partida del vínculo (en donde el usuario hará clic) se escribe: <br><br>
+&ltA HREF= "#principio&gt Ir al principio&lt/A&gt<br><br>
+Para que este tipo de enlaces funcione es indispensable el uso del caracter "#" seguido de la palabra a la cual queremos referirnos.<br><br>
+El punto de destino del vínculo (es decir, el lugar de la misma página al que será "transportado" el usuario tras el clic) también se delimita con unas etiquetas &ltA&gt y &lt/A&gt, pero el atributo HREF cambia por NAME: <br><br>
+&ltA NAME="Principio">principio &lt/A&gt<br><br>
+Lo que se encuentra en el medio de las directivas <br>  &ltA HREF= "#principio&gtxxxx&lt/A&gt,en este caso xxxx es la que va a aparecer subrayada en el navegador y es en esa parte que cuando el visitante haga clic que se va a transportar a la parte del documento que se hace referencia.<br><br>  
+<font color=blue><b>Enlaces a nuestra direccion de correo</b></font><br><br>
+La estructura en HTML es muy parecida a la de los hipervínculos descriptos anteriormente. Sólo hay que agregar la partícula "mailto:" en el contenido del atributo HREF.<br><br> 
+Supongamos que queremos vincular la dirección hazek_dk@hotmail.com , Seria de la siguiente forma:<br><br>   
+Cualquier duda &ltA HREF=mailto:hazek_dk@hotmail.com&gt mandame un email &lt/A&gt<br><br>
+Y se verá en el browser:<br><br>
+Cualquier duda<A HREF=mailto:hazek_dk@hotmail.com> mandame un email </A><br><br>
+<FONT FACE COLOR="blue">Im&aacute;genes como enlaces</FONT><br><br>
+Otra caracter&iacute;stica interesante de las im&aacute;genes insertadas es que permiten ser utilizadas como hiperv&iacute;nculos. Para esto, es necesario crear un enlace  y en vez de encerrar el texto dentro la etiqueta <B>&lt;A&gt;</B> hay que encerrar una imagen.</P>
+<P>Ejemplo:</P>
+<B><P>&lt;A HREF="http://www.geocities.com/hazeksite"&gt; &lt;img src="HazekStar.gif" alt="Click aqui para ir a Hazek Web Site &reg"&gt; &lt;/A&gt;</P>
+</B><P>Resultado: </P>
+<P><A HREF="http://www.geocities.com/hazeksite"><IMG SRC="HazekStar.gif" ALT="Click aqui para ir a Hazek Web Site &reg"></A></P>
+<P>Tambien podemos enlacer una imagen con nuestra direccion de correo electronico.</P>
+<P>Ejemplo:</P>
+<B><P>&lt;A HREF=mailto:HAZEK_DK@HOTMAIL.COM ;img src="email.gif" <br>alt="Click aqui para mandarme un mail" &gt</P>
+</B><P>El usuario ver&aacute;</P>
+<P><A HREF="David Hdz"><IMG SRC="email.gif" BORDER=0 ALT="Click aqui para mandarme un mail"></A></P>
+<font color=blue><b>Enlaces con una página fuera de nuestro dominio.</b></font><br><br>
+Si queremos enlazar con una página que esté en un servidor distinto al que soporta nuestra página, es necesario conocer su dirección completa, o URL (Uniform Resource Locator). El URL podría ser, además de la dirección de una página del Web, una dirección de ftp, gopher, etc.<br><br> 
+Una vez conocida la dirección (o URL), lo colocamosel destino del enlace. Si queremos enlazar con la página de mi antiguo manual (cuyo URL es: http://mx.geocities.com/hazek:_spx/dk.htm), la etiqueta sería:<br><br>
+&ltA HREF="http://mx.geocities.com/hazek_spx/dk.htm"&gt Mi antigua pagina &lt/A&gt<br><br> 
+El cual se veria asi:<br><br>
+<A HREF="http://mx.geocities.com/hazek_spx/dk.htm"> Mi antigua página </A><br><br> 
+Es muy importante copiar estas direcciones correctamente (respetando las mayúsculas y minúsculas, pues los servidores UNIX sí las distinguen).<br><br> 
+<font color=blue><b>Las URL</font></b><br><br>
+Las URL a demas de indicarnos la direccion exacta de la pagina, tambien nos dice que tipo de servicio puede ser prestado por ese servidor.<br><br>
+Tiene el siguiente formato:<br><br>
+<b>http</b>  Es el servicio invocado para transmitir páginas web y el quese usa normalmente en los enlaces <br><br> 
+<b>https</b>  Es una innovación sobre el anterior, que nos permite acceder a servidores (generalmente comerciales) que nos ofrecen el uso de técnicas de enciptación para proteger los datos que intercambiemos con él de terceras personas.  <br><br>
+<b>ftp</b>  Permite trasmitir ficheros desde servidores de ftp anónimo. Si no le pedimos un fichero sino un directorio, en general el navegador se encargará de mostrarnos el contenido del mismo para que podamos escogerlo cómodamente. Utilizando la @ podremos acceder a servidores privados.  <br><br>
+<b>mailto</b>  Para poder mandar un mensaje a traves de e-mail.<br><br> 
+<b>news</b>  Para poder acceder a foros de discusión o a grupos de noticias. Se indica el servidor y el grupo.<br><br>
+<b>telnet</b>  No es implementado generalmente porlos navegadores, que suelen invocar un programa externo. Nos permite conectarnos con otros ordenadores y entrar en ellos como si nuestro ordenador fuese una terminal del mismo.  <br><br>
+<b>gopher, wais</b> Cualquiera de estos servicios de localización de información, se indicará el directorio para localizar el recurso concreto.<br><br>
+La maquina.dominio indicará el servidor que nos proporciona el recurso, en este caso se utilizará el esquema IP para identificar la maquina será el nombre de la maquina y el dominio.<br><br>
+Es muy importante indicar siempre el dominio, ya que debemos suponer que se conectarán a nuestras páginas desde servidores externos a nuestra red local por tanto si no indicamos el dominio las URL que especifiquemos no podrían ser seguidas por los navegadores externos. <br><br>
+<b><font color=blue>TRUCOS</font></b><br><br>
+¿Cómo hacer que un botón actúe como un link?<br><br>
+Aquí tenemos un botón que al ser pulsado me nviara un E-mail<br><br>
+<FORM ACTION="mailto:hazek_dk@hotmail.com">
+<INPUT TYPE="SUBMIT" VALUE="Púlsame"><br><br>
+Éste es el código fuente:<br><br>
+&ltFORM ACTION="mailto:hazek_dk@hotmail.com"&gt<br>
+&ltINPUT TYPE="SUBMIT" VALUE="Púlsame"&gt<br><br>
+Y si lo que queremos es  hacer un link para otra pagina lo unico que debemos es cambiar ACTION="pagina"<br><br>
+<br><center><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center>
+
+
+</FONT>
+</HTML>

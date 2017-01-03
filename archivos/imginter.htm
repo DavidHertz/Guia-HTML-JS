@@ -1,0 +1,137 @@
+<html>
+<head>
+<title>JavaScript</title>
+<SCRIPT LANGUAGE="JavaScript">
+
+function ver() {
+document.images["change"].src="explota.jpg";
+}
+function explotar() {
+document.images["change"].src="bomba.jpg";
+}
+function prender() {
+document.images["cambio"].src="encendido.jpg";
+}
+function apagar() {
+document.images["cambio"].src="apagado.jpg";
+}
+</SCRIPT>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<center>
+<h3><font color="blue">Imagenes interactivas</h3></font>
+</center>
+Estás cansado de escuchar decir que una imagen vale más que mil palabras. En el mundo del diseño 
+web, el sentido de esa frase depende mucho de tí. Nadie duda que el uso de fotos y gráficos 
+suman atractivo y claridad a tu página. Pero usando JavaScript, los recursos gráficos pueden 
+hacer estallar de <b>interactividad</b> tu sitio personal.¿Necesitas pruebas? Posa el cursor sobre la 
+<b>siguiente imagen</b>.
+<p>
+<center>
+<a href="#" onMouseOver="ver('change');" onMouseOut="explotar('change');">
+<img src="bomba.jpg" border="0" name="change">
+</a><br><font size=1>Pasa el mouse por la imagen</font></center>
+<p>
+El explosivo truco de arriba no tiene dinamita como detonante, sino JavaScript, el lenguaje 
+universal interactivo. Usando las propiedades del objeto <b>Image</b>, no te resultará difícil <b>crear 
+efectos de esta clase</b>. Pero antes de usarlo, debes tomar ciertas precacuciones.
+<p>
+El objeto Image está muy relacionado con la etiqueta HTML <b>&ltIMG></b> (y sus demás atributos), usada 
+para insertar <b>imágenes en un documento web</b>. Por otra parte, conviene que uses imágenes del 
+tipo <b>GIF</b> o <b>JPG</b> en tus páginas, dos formatos de archivo que combinan gran calidad con bajo peso. 
+<p>
+Así, no sólo agilizarás la descarga de tu página, sino que ayudará a que las funciones asociadas 
+al objeto <b>Image</b> se ejecuten más rápidamente. Sigue leyendo para saber más sobre la creación de 
+<b>imágenes interactivas</b> con JavaScript. 
+<p>
+<center>
+<h3><font color="blue"><a name=cuestion>Cuestión de imagen</h3></font>
+</center>
+El objeto <b>Image</b> refiere a un gráfico creado en la página HTML con la etiqueta <b>&ltIMG></b>. 
+Pero para acceder a una imagen del <b>documento</b> web se usa la propiedad <b>images</b> del 
+objeto document. Esta propiedad es, en verdad, una lista (o "<b>array</b>") de todos los gráficos 
+incluidos en la página. 
+<p>
+Por ello, es importante que todas las imágenes hayan sido nombradas con el atributo "<b>NAME</b>" 
+de la etiqueta <b>&ltIMG></b>. Sin esa identificación, JavaScript no podrá determinar a qué 
+imagen deseas afectar con una función.
+<p>
+El cuadro de abajo se muestra la manera en que se usa la propiedad <b>images</b> y describe la 
+relación entre ella y el atributo "NAME". Pero el objeto Image tiene varias propiedades que 
+permiten dotar a la imagen referida de interactividad o incluirla en un evento. Las que siguen 
+son las <b>propiedades</b> más útiles del objeto <b>Image</b>. 
+<p>
+<center><img src="img.gif"><br>
+<a onclick="window.open('imagen9.htm','popup','width=520 height=345')">
+<font face=Fixedsys style=cursor:hand color=blue><u>Ampliar</u></font></a>
+</center>
+<p>
+<b>scr</b>:
+<p>
+Define el <b>origen de la imagen</b> incluida en la página. Con esta propiedad se crean funciones que 
+cambian el archivo gráfico ante un acción del usuario. Sigue leyendo y sabrás cómo lograrlo.
+<p>
+<b>Sintaxis:<i> Image.<font color=red>scr=</font><font color=blue>"file:///C:/Carpeta/archivo.gif"</font></i></b>
+<p>
+<b>lowscr</b>:
+<p>
+Muestra una versión en baja resolución de una imagen hasta que el browser cargue la original. 
+<b>Lowscr</b> determina la ubicación de ese archivo que actuará como "<b>muestra temporaria</b>".
+<p>
+<b>Sintaxis:<i> Image.<font color=red>lowscr=</font><font color=blue>"file:///C:/Carpeta/archivo.gif"</font></i></b>
+<p>
+<b>complete</b>:
+<p>
+Si se la usa, devolverá un valor lógico que será "<b>true</b>" una vez que la imagen haya terminado de 
+cargarse. Resulta muy útil para funciones que ejecutan una determinada operación sólo si el 
+gráfico fue cargado por el browser. Por ejemplo, si una imagen se carga, se ejecuta una operación 
+que hace titilar otra imagen tras el puntero del mouse.
+<p>
+<b>Sintaxis:<i> Image.<font color=red>complete</font></i></b>
+<p>
+<center>
+<h3><font color="blue"><a name=magia>Movimientos mágicos del mouse</h3></font>
+</center>
+Lograr que dos imágenes se alternen entre sí al pasar por encima el cursor es uno de los trucos 
+más fáciles de hacer con JavaScript. Prueba con el ejemplo de abajo.
+<p>
+<center>
+<a href="#magia" onMouseOver="prender('cambio');" onMouseOut="apagar('cambio');"> 
+<img name="cambio" src="apagado.jpg" border=0></a><br><font size=1>Pasa el mouse por la imagen
+</font></center>
+<p>
+Para crearlo, hay que tener en cuenta algunos detalles. Primero, elegir <b>dos imágenes con el 
+mismo tamaño</b> para mostrar alternativamente. Así, evitarás que se vean saltos molestos al 
+producirse el cambio.
+<p>
+También, <b>insertar</b> en tu página el <b>primer gráfico</b> (<b>apagado.jpg</b>) y usar el atributo "<b>NAME</b>" del tag 
+<b>&ltIMG></b> para identificarlo con una palabra. En el ejemplo se llamo "<b>cambio</b>". Recuerda que si no 
+identificas la imagen, te resultará imposible incorporarla a una función.
+<p>
+Luego de cumplir con estos dos pasos, estás <b>listo para programar</b>. Aquí está el código que 
+deberás escribir:
+<p>
+<center><img src="script_img.gif"></center>
+<p>
+La acción principal del script es cambiar la propiedad <b>scr</b> de la imagen para poder mostrar otro 
+archivo. Las funciones "<b>prender</b>" y "<b>apagar</b>" son las encargadas de hacerlo. Ellas exhiben los 
+gráficos "<b>encendido.jpg</b>" y "<b>apagado.jpg</b>", respectivamente. Por otro lado, los eventos <b>onMouseOver</b> 
+y <b>onMouseOut</b> se ocupan de poner en acción el código. El primero, <b>onMouseOver</b>, "<b>enciende</b>" la 
+imagen, y <b>onMouseOut</b> la "<b>apaga</b>". Ambos eventos se ubican dentro de la etiqueta <b>&ltA HREF></b>. 
+<p>
+Un último detalle: para que el script funcione en todos los navegadores, <b>es necesario que la 
+imagen sea un vínculo</b>, porque los eventos que controlan la posición del cursor no son admitidos 
+por la etiqueta <b>&ltIMG></b> en el <b>Netscape Navigator</b>, aunque sí en el <b>Internet Explorer 5</b> o superior. 
+Sigue leyendo y verás en detalle los diferentes <b>eventos</b> que existen y cómo se asocian a los 
+elementos propios del HTML.
+<p>
+Es todo. Ahora sólo resta que apliques este truco a tus propias ideas. 
+<p>
+<center>
+<a href="form_but.htm">Formularios y botones...</a>
+<p><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center> 
+
+
+

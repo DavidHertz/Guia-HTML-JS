@@ -1,0 +1,140 @@
+<HTML>
+<HEAD><TITLE>MANUAL DE HTML</TITLE></HEAD>
+<body background="fondo.jpg" bgproperties=fixed>
+<FONT FACE= "VERDANA">
+<H3><FONT COLOR= "BLUE">PARRAFOS,SALTOS DE LINEA,LINEAS HORIZONTALES.</FONT></H3>
+Cuando nosotros estamos elaborando una pagina WEB, en el editor que sea, cundo la vomos a correr el browser lo primero que nos damos cuenta es que los espacios que dimos  en el editor no sean respetado. Con este objetivo es que se crearon estas etiquetas. Veamos como funciona la primera.<br><br>
+<center><img src="color.gif" width="400" height="1"></center><br><br>
+<b>&ltPARRAFOS&gt</b><br><br> 
+Si nosotros queremos escribir un párrafo grande, y no nos importa que los retornos de carro sean aleatorios (dependiendo del tipo de navegador y de la resolución de la pantalla en el que se esté visualizando el documento), pero sin embargo queremos que haya una separación entre párrafo y párrafo, poseemos una directiva cerrada en HTML, que nos solucionará el problema: &ltP&gt...&lt/P&gt, estas etiquetas se utilizan para indicar el inicio y el final de un parrafo<br><br> 
+Con este comando forzamos un salto de linea doble, es decir dejando una linea en blanco.
+<Atributo><br><br>
+CLEAR= indica que la linea debera saltar hasta encontrar la condicion adecuada. <br><br>
+&ltP CLEAR=left&gt<br>
+busca una linea que tenga libre el margen izquierdo<br><br> 
+&ltP CLEAR=right&gt<br>
+busca una linea que tenga libre el margen derecho<br><br> 
+&ltP CLEAR=all&gt<br>
+busca una linea que tenga ambos margenes libres<br><br>  ALIGN= indica que la proxima linea estara alineada. Aqui es posible usar el cierre del comando </P> para indicar el fin de alineado.<br><br>
+&ltP ALIGN=center&gt centra linea entre ambos margenes.<br><br> 
+&ltP ALIGN=right&gt corre la linea al margen derecho. <br><br>
+&ltP ALIGN=justify&gt justifica la linea entre ambos margenes. <br><br>
+&ltP ALIGN=indent&gt indenta la linea.<br><br>
+Ademas se pueden usar el parametro ID=nombre un identificador de parrafo en lugar de usar el comando <A NAME=#nombre> para hacer enlaces en la misma pagina.
+Tambien se puede introducir el parametro NOWRAP=off usado para impedir el salto de linea automatico.<br><br>
+<center><img src="color.gif" width="400" height="1"></center><br><br>
+<b><font color=blue><a name=&ltBR&gt>&ltBR&gt</font></b><br><br> 
+Con este comando fuerzas un salto de linea simple, es decir la siguiente linea empieza en la linea inmediatamente inferior, respetando la misma sangria. Esto es muy usado para rodear las imagenes flotantes y puedes especificar el parametro CLEAR= para indicar que la linea debera saltar hasta encontrar la condicion adecuada. Si se coloca varias veces genera  espacios en blanco.<br><br>
+&ltBR CLEAR=left&gt<br>
+busca una linea que tenga libre el margen izquierdo<br><br> 
+&ltBR CLEAR=right&gt<br>
+busca una linea que tenga libre el margen derecho<br><br> 
+&ltBR CLEAR=all&gt<br>
+busca una linea que tenga ambos margenes libres.<br><br> 
+Otros Atributos<br><br>
+<b>STYLE:</b> especifica información de estilo sobre un simple elemento del documento. Los valores se colocan según el formato "nombre:valor", separados por ";". <br><br>
+<b>TITLE:</b> para titular un documento o una sección del mismo. Algunos programas visores pueden colocar el valor de este atributo como texto insertado o audio.<br><br> 
+<b>CLASS:</b> para señalar qué tipo de texto contiene. Este atributo solamente es reconocido por los visores emacs.W3 y Arena; es ignorado por los otros. Su uso identificatorio dentro del contexto de hojas de estilo, ha ampliado su valor, así como su visualización por todos los browsers que aceptan CSS. <br><br>
+<b>ID:</b>. identifica un párrafo.<br><br>
+<center><img src="color.gif" width="400" height="1"></center><br><br>
+<b><font color=blue><a name=&ltHR&gt>&ltHR&gt</font></b>(horizontal rule). <br><br> 
+Esta etiqueta es utilizada para insertar una linea horizontal.<br><br>
+ATRIBUTOS<BR><BR>
+<b>SIZE:</b>  La mayoría de los browsers despliegan las líneas con un grosor de 3 píxeles. Una forma de modificar esto es con el atributo SIZE y un valor en píxeles.<br><br> 
+EJEMPLO:<BR><BR>
+Aquí tenemos cuatro líneas. La primera es de tres píxeles porque no tiene ninguna aclaración. La segunda es de 15 píxeles, la tercera de 37 y la cuarta de 70.<br><br>
+&ltHR&gt<br>
+&ltHR size=15&gt<br>
+&ltHR size=37&gt<br> 
+&ltHR size=70&gt<br><br>
+<HR>
+<HR size=15>
+<HR size=37> 
+<HR size=70>
+El resultado:<br>
+Aquí tenemos cuatro líneas. La primera es de tres píxeles porque no tiene ninguna aclaración. La segunda es de 15 píxeles, la tercera de 37 y la cuarta de 70. <br><br>
+<b>WIDTH:</b> La etiqueta &ltHR&gt establece una línea que ocupa todo el ancho de la pantalla. Para modificar esto es necesario el atributo WIDTH con un valor que puede indicarse en píxeles o en un porcentaje del ancho de la pantalla.<br><br>
+EJEMPLO:<br><br>
+&ltHR width=30&gt<br> 
+&ltHR width="50%"&gt<br> 
+<HR width=30> 
+<HR width="50%"> 
+Aquí hay dos líneas: la primera es de 30 píxeles de largo y la segunda ocupa el 50 por ciento de la pantalla<br><br> 
+<b>ALIGN:</b>Esta etiqueta es utilizada para modificar la posición de la línea. Se debe indicar left (izquierda), right (derecha), center (centro), según corresponda.<br><br>
+EJEMPLO<br><br>
+&ltHR width="30%" align=right&gt<br>
+&ltHR width="30%" align=center&gt<br>
+&ltHR width="30%" align=left&gt Izquierda <br><br>
+<HR width="30%" align=right><br>
+<HR width="30%" align=center><br> 
+<HR width="30%" align=left><br>
+Aqui hay tres lineas: la primera se encuentra alineada a la derecha, la segunda en el centro, y la tercera a la izquierda.<br><br>
+<b>COLOR:</b>Esta etiqueta es utilizada para ponerle  color a la linea.<br><br>
+EJEMPLO<br><br>
+&ltHR WIDTH=80% SIZE=12 ALIGN=right COLOR=red&gt<br>
+&ltHR WIDTH=50% SIZE=20 ALIGN=left COLOR=navy&gt<br> 
+<HR WIDTH=80% SIZE=12 ALIGN=right COLOR=red> 
+<HR WIDTH=50% SIZE=20 ALIGN=left COLOR=navy > <br><br>
+<b>Comentarios</b><br><br>
+Es muy útil escribir comentarios en el documento HTML sobre el código que escribimos, que nos pueden servir para recordar posteriormente sobre lo que hicimos, y que no queremos que se vean en pantalla. <br>
+Esto se consigue encerrando dichos comentarios entre estos dos símbolos: &lt!--  y  --&gt<br><br> 
+EJEMPLO:<br><br>&lt!-- Esto es un comentario --&gt <br><br>
+<center><img src="color.gif" width="400" height="1"></center><br><br>
+<b><font color=blue><a name=&ltPRE&gt>&ltPRE&gt</font></b> <br><br>
+Como ya les dige anteriormente, cuando nosotros estamos elaborando nuetra WEB, el editor de texto no respeta los espacios que se dan en el. Para que el texto salga tal cual como se  hizo en el editor se utiliza esta etiqueta. <br><br>
+Esta etiqueta epresenta un problema cuando la línea es demasiado larga, ya que no la corta el navegador y se mostraría tal y como aparece en el fichero fuente. No se recomienda como forma rápida de convertir un documento texto a formato visible en HTML ya que presenta muchas limitaciones y no se obtiene una buena presentación.<br><br> 
+Dentro de la etiqueta PRE no tendrán validez la mayoría de las instrucciones HTML, solo se podrán utilizar &ltB&gt, &ltI&gt y los hiperenlaces. El resto de las etiquetas HTML son ignoradas.<br><br>
+<b>EJEMPLO:</b><br><br> 
+&ltPRE&gtEsto se vera en el navegador tal cual<br> 
+como se escribio en el <br>
+editor de texto&ltPRE&gt.<br>
+<PRE>Esto se vera en el navegador tal cual 
+como se escribio en el
+editor de texto</PRE><br>
+<center><img src="color.gif" width="400" height="1"></center><br><br>
+<b><font color=blue><a name=&ltSPACER&gt>&ltSPACER&gt</font></b> <br><br> 
+Esta etiqueta fue implementada en el  Netscape 3.0. Esta etiqueta  permite definir espacios en blanco sin utilizar el elemento &ltPRE&gt.Esta etiqueta se puede utilizar en cualquier zona de una página, pero donde más se aprecia su efecto es en las columnas. Se escibirá asi:<br><br> 
+<b>ARIBUTOS:</b><br><br>
+<b>TYPE:</b>Este atributo a su vez puede ser utilizado con HORIZONTAL y VERTICAL, la primera deja un espacio en blanco a la izquierda de la primera linea, la segunda  deja un espacio en blanco por arriba de la primera linea. Para ambos tipos el tamaño del espacio se da en puntos (pixels) con el atributo SIZE. El valor por defecto es 0. <br><br> 
+
+&ltMULTICOL COLS=2&gt <br>
+&ltSPACER TYPE=HORIZONTAL SIZE=35&gt<br>
+texto texto texto texto texto texto texto texto texto texto texto texto<br>
+&ltP&gt<br>
+&ltSPACER TYPE=HORIZONTAL SIZE=35&gt<br>
+texto texto texto texto texto texto texto texto texto texto texto texto<br>
+&ltSPACER TYPE=VERTICAL SIZE=35&gt<br>
+texto texto texto texto texto texto texto texto texto texto texto texto<br>
+&lt/MULTICOL&gt<br><br>
+
+<MULTICOL COLS=2>
+<SPACER TYPE=HORIZONTAL SIZE=35>
+texto texto texto texto texto texto texto texto texto texto texto texto
+<P>
+<SPACER TYPE=HORIZONTAL SIZE=35>
+texto texto texto texto texto texto texto texto texto texto texto texto
+<SPACER TYPE=VERTICAL SIZE=35>
+texto texto texto texto texto texto texto texto texto texto texto texto
+</MULTICOL></p>
+ Fíjate en que entre las dos instrucciones con tipo horizontal hay un elemento &ltP&gt. En efecto, es necesario indicarle a &ltSPACER&gt donde termina el párrafo para que ejecute la siguiente instrucción del mismo tipo.<br><br> 
+<center><img src="color.gif" width="400" height="1"></center><br><br>
+<b><font color=blue><a name=&ltMULTICOL&gt>&ltMULTICOL&gt</font></b> <br><br>
+Con el elemento &ltMULTICOL&gt es posible estructurar un documento de forma vertical, es decir, darle la misma apariencia que tienen, por ejemplo, un periódico o una revista.<br><br>
+
+<b>ATRIBUTOS:</b><br><br>   
+<b>COLS:</b> Es obligatorio, y determina cuantas laa columnas que apareceran en la pantalla.<br><br>
+<b>GUTTER:</b> Establece el espacio que habrá entre columnas el cual se mide en pixels.  Si se omite, el valor por defecto es de 10.<br><br> 
+<b>WIDTH </b>Sirve para controlar el ancho de todas las columnas definidas respecto al ancho de la pantalla. Todas las columnas son siempre del mismo ancho. Este parámetro tambien se mide  en pixels, pero tambien se puede expresar en porcentaje. Si se omite, por defecto se entiende 100%.<br><br> 
+Por supuesto, dentro de las columnas se puede colocar anclas, imagenes, y en general todas las etiquetas del lenguaje.Las columnas tambien se pueden anidar, es decir, colocar una dentro de otra.<br><br> 
+<b>EJEMPLO:</b><br><br>
+&ltMULTICOL COLS=2 GUTTER=10 WIDTH=100%&gt<br>
+texto texto texto texto texto texto texto texto texto texto texto texto<br>
+&ltMULTICOL COLS=2 GUTTER=10 WIDTH=100%&gt<br>
+texto texto texto texto texto texto texto texto texto texto texto texto<br>
+&lt/MULTICOL&gt<br>
+&lt/MULTICOL&gt<br><br>
+<FORM ACTION="ejemplo4.html"  TARGET="_blank">
+<INPUT TYPE="SUBMIT" VALUE="Ver ejemplo"><br><br>
+<br><center><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center>
+</FONT>
+</HTML>

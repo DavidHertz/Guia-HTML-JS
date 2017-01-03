@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<TITLE>MANUAL DE HTML</TITLE>
+</HEAD>
+<body background="fondo.jpg" bgproperties=fixed>
+<FONT FACE=VERDANA><b> <h3><font color= "blue"><A NAME="TAMAÑO, COLOR Y TIPO DE LETRA"> TAMAÑO, COLOR Y TIPO DE LETRA</a></font></h3></b>
+Para definir distintos tama&ntilde;os de letra, en HTML se utiliza el elemento lleno <B>&lt;Hx&gt;</B> &lt;/Hx&gt; donde x es un n&uacute;mero que puede variar entre 1 y 6, siendo 1 el tama&ntilde;o mayor.
+<P>
+Se escribir&aacute;n as&iacute;:
+
+<CENTER>
+<TABLE border=2 cellspacing=4 cellpadding=4>
+<TH>Ejemplo<TH>Se veria como<TR>
+<TD><B>&lt;H1&gt;</B>Texto de Prueba<B>&lt;/H1&gt;</B>
+<TD><H1>Texto de prueba</H1><TR>
+<TD><B>&lt;H2&gt;</B>Texto de Prueba<B>&lt;/H2&gt;</B>
+<TD><H2>Texto de Prueba</H2><TR>
+<TD><B>&lt;H3&gt;</B>Texto de Prueba<B>&lt;/H3&gt;</B>
+<TD><H3>Texto de Prueba</H3><TR>
+<TD><B>&lt;H4&gt;</B>Texto de Prueba<B>&lt;/H4&gt;</B>
+<TD><H4>Texto de Prueba</H4><TR>
+<TD><B>&lt;H5&gt;</B>Texto de Prueba<B>&lt;/H5&gt;</B>
+<TD><H5>Texto de Prueba</H5><TR>
+<TD><B>&lt;H6&gt;</B>Texto de Prueba<B>&lt;/H6&gt;</B>
+<TD><H6>Texto de Prueba</H6><TR>
+</TABLE>
+</CENTER><br><br>
+
+Otra forma de cambiar los tama&ntilde;os de letra es utilizar el elemento <B>&lt;FONT </B>&gt; con el atributo <b> VALOR</B>, que es un  n&uacute;mero entre 1 y 7. El valor por defecto del texto es 3, por lo que valor puede ser positivo (+) o negativo (-) respecto a 3. Una gran ventaja de esta notaci&oacute;n respecto a la anterior es que no se produce un salto de p&aacute;rrafo despu&eacute;s de cada cambio, por lo que pueden hacerse cosas como esta:
+
+<pre>
+<B>&lt;FONT SIZE</B>=3&gt;A&lt;/font&gt;&lt;FONT SIZE=4&gt;A&lt;/font&gt;&lt;FONT SIZE=5&gt;A&lt;/font&gt;
+
+&lt;FONT SIZE=6&gt;A&lt;/font&gt;&lt;FONT SIZE=7&gt;A&lt;/font&gt;&lt;FONT SIZE=6&gt;A&lt;/font&gt;
+
+&lt;FONT SIZE=5&gt;A&lt;/font&gt;&lt;FONT SIZE=4&gt;A&lt;/font&gt;&lt;FONT SIZE=3&gt;A&lt;/FONT&gt;
+</PRE>
+
+Dar&aacute; como resultado:
+<P>
+<FONT SIZE=3>A</font><FONT SIZE=4>A</font><FONT SIZE=5>A</font><FONT SIZE=6>A</font><FONT SIZE=7>A</font><FONT SIZE=6>A</font><FONT SIZE=5>A</font><FONT SIZE=4>A</font><FONT SIZE=3>A</FONT>
+<P>
+Se puede cambiar el tama&ntilde;o por defecto (3) de toda la p&aacute;gina con el elemento <B>&lt;BASEFONT SIZE</B>=valor&gt;. El texto tomar&aacute; el tama&ntilde;o indicado por <B>valor</B> y lo mantendr&aacute; hasta que aparezca otro elemento &lt;BASEFONT SIZE=valor&gt; y lo restaure o lo cambie por otro diferente.<br><br>
+<center><img src="color.gif" width="400" height="1"></center><p>
+El atributo <b>COLOR:</b> Especifica el color de los caracteres. Los colores se identifican mediante el nombre del color en inglés (como red, white o black) o mediante un código hexadecimal con el formato "#rrggbb", donde "rr", "gg" y "bb" son valores hexadecimales comprendidos entre 00 y FF que especifican el grado de saturación de los colores rojo, verde y azul.<br>
+Los colores se crean mezclando los tres colores básicos: rojo, verde y azul.
+Cada color se especifica con números hexadecimales, es decir:<br><br>
+<center>0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F (del 0 al 15)</center><br> 
+Los colores básicos se conseguirían del siguiente modo:<br><br>
+#FF0000 Este sería el color rojo. <spacer><font color=#FF0000>HTML</font><br> 
+#00FF00 Este el color verde.  <spacer><font color=#00FF00>HTML</font><br>
+#0000FF Por último el color azul. <spacer><font color=#0000FF>HTML</font><br><br> 
+Por tanto, una cantidad de rojo (digamos #550000), mezclado con una cantidad de verde (digamos #00AA00) y una cantidad de azul (digamos #000088) nos daría el siguiente color: #55AA88. Para hacer un color más oscuro reduciríamos el número que lo indentifica, es decir, si queremos un rojo más claro en lugar de usar el número: #FF0000 podríamos usar #550000.<br>
+Si  queremos  tonos más suaves reduciremos los números de los colores que no nos interesan, es decir, si en lugar de un rojo queremos un rosa tendrímos que hacer: #FF7070.<br><br>
+EJEMPLO:<br><br>
+&ltfont color=#FF0000&gtDa&ltfont color=#ff7070&gtvi&ltfont color=#0000FF&gtd&ltfont color=#ff00ff&gtH&lt/font><br><br>
+El cual se veria asi:<br><br>
+<center><font color=#FF0000>Da</font><font color=##ff7070>vi</font><font color=##0000FF>d</font> <font color=ff00ff>H</font></center>
+<a href =colores.html>Ver codigo de colores</a><br><br>
+<center><img src="color.gif" width="400" height="1"></center><p>
+Para colocar un tipo de letra se utiliza la etiqueta <b>FACE=“nombre de letra”</b> .
+Este atributo lo que hace es definir el estilo o nombre de letra con el que queremos que aparezca nuestro texto. Por defecto el valor de este valor en todos los navegadores , es el del tipo “Times New Roman”, pero que nosotros podemos modificar indicando un nombre distinto de letra. Por ejemplo, si quisieramos que la letra apareciera con formato de letra estilo “Arial”, lo único que tendríamos que definir es el nombre de letra según: <br><br>
+
+&ltFONT FACE=“arial”&gt...&lt/FONT&gt <br><br>
+lo que haría que el bloque te texto entre las directivas tuviera el formato de texto “Arial” y no “Times new Roman” que aparecería por defecto. Se pueden definir varios tipos en el mismo atributo de la forma: <br><br>
+
+&ltFONT FACE=“arial, courier”&gt...&lt/FONT&gt<br><br> 
+
+Siendo preferente la primera que coloquemos y la segunda en el supuesto de que nuestro usuario no tuviera la primera instalada en su equipo local. Esto por lo tanto, limita el tipo de letras a las que nuestro usuario visitante, tenga instaladas en su equipo, siendo limitada la lista de letras que se instalan por defecto (por ejemplo), en el sistema operativo que emplee (Windows, MacOS, OS/2, UNIX, Linux....) por lo que por ello se suelen definir 2 letras, y en el supueto de que no tuviera ninguna de las especificadas, se tomaría la de defecto del navegador que no es otra que la ya nombrada “Times New Roman”. “Arial” suele ser un valor válido para los distintas plataformas de navegación.<br> 
+<br><center><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center>
+</FONT>
+</HTML>

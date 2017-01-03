@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Java script</title>
+<script language="javascript"> function alerta(){
+alert("Esto es un cuadro alert")
+}
+</script>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<font color=blue><center><h3>¿Que es JavaScript?</h3></font></center>
+Todos hablan de él y cada vez más cibernautas lo utilizan para extender
+las capacidades de sus sitios. Pero ¿de qué se trata? Tal vez puedas tener 
+una respuesta si pasas el cursor sobre <a onMouseOver="alert('Esto es JavaScript')"><font color=blue><u>este vínculo</u></a></font>. Y si no estás convencido, 
+quizás puedas sorprenderte si haces <a onClick="window.open('breakout.htm','win','width=630 height=375')"><font color=blue style=cursor:hand><u>click aquí</u></font></a>. Como pudiste ver en estos dos 
+ejemplos, JavaScript servirá para que los visitantes de tu sitio sean participes
+activos y no simplemente lectores.<p>
+Pero el lenguaje no se limita a mostrar mensajes o hacer juegos: también 
+podrás insertar fechas, incluir calculadoras, abrir ventanas o pedir información al navegante. 
+Además, si tu página tiene formularios que los internautas deben completar para recibir
+noticias o participar de sorteos. Con JavaScript podrás crear una función que verifique 
+la validez de los datos ingresados, para alertar al usuario si escribió mal su teléfono 
+o dirección de mail antes de que envíe la información. Interesante, ¿no? y si no te fuera
+suficiente proximamente alargare este curso para que veas que no es nada dificil.
+<p>
+Pero antes de seguir, conviene que conozcas hasta dónde puedes llegar con JavaScript y hasta 
+donde no. El primer dato importante es que no es un lenguaje de programación en sí, como Fox, Clipper, Visual Basic o C, entre otros. Más bien es un lenguaje script, orientado a documentos web. Los lenguajes script son los que no son capaces de crear programas independientes (los famosos archivos ejecutables que llevan extensión .EXE), en este caso sólo servirá para mejorar las páginas de tu sitio (¿te parece poco?).
+Tal vez ya usaste un lenguaje script, por ejemplo el que se usa para crear Macros en Microsoft 
+Word o Excel para darle mayor utilidad a esos archivos. 
+Volviendo a JavaScript, fue creado por Netscape y originalmente llamado LiveScript. Tomaba 
+muchos conceptos de Java, el lenguaje creado por Sun Microsystems y tal era su parecido con 
+ese lenguaje y la creciente posibilidad de que LiveScript se transformará en su competidor, que Sun convenció a Netscape de unir fuerzas para hacer evolucionar a LiveScript. El resultado de ese trabajo conjunto se conoció en diciembre de 1995, en una nueva versión rebautizada JavaScript.
+Quizás por este inicial parentesco, todavía muchos siguen considerando a JavaScript y Java 
+como sinónimos, cuando en realidad no son lo mismo. Sigue leyendo para saber en que se diferencian estos "hermanos" tecnológicos.
+<p>
+<center>
+<h3><font color="blue">Cómo agregar un script a mi página</h3></font>
+</center>
+
+JavaScript depende del HTML para vivir, pues se trata de un lenguaje 
+script cuyas funciones se suman al código HTML, otorgando nuevas capacidades a tu página web.
+<p>
+Para insertar sentencias JavaScript en un documento web es necesario emplear la etiqueta 
+<b>&ltSCRIPT></b> (si no sabes que es una etiqueta, conviene que leas <a href="menu.html" target="dos">HTML</a> y luego retomes 
+este curso). Todas las funciones JavaScript se colocan en estas etiquetas (o "tags"), tal como muestra la figura.
+<br><br><center><img src="etiqueta_script.gif"></center><br>
+En el ejemplo, las funciones JavaScript no están ubicadas en cualquier parte de la página 
+web, sino dentro de su cabecera entre las etiquetas <b>&ltHEAD></b>. Si bien no hay ninguna regla 
+que imponga la posición donde debe insertarse el script, y hasta puede ponerse en el cuerpo (<b>&ltBODY></b>) 
+conviene acostumbrarse a colocarlo en la cabecera porque JavaScript trabaja con funciones y 
+los objetos funcionan mejor si se cargan al principio y están disponibles lo más rápido posible 
+para los usuarios.
+<p>
+Como cualquier otra etiqueta, el tag <b>&ltSCRIPT></b> posee atributos. Uno de ellos es 
+<b>LANGUAGE</b>, con el que se le dice al browser la versión de JavaScript en la que 
+está escrita el programa. La sintaxis correcta, entonces, sería así:<p>
+<b>
+&ltSCRIPT LANGUAGE= "JavaScript"><br>
+....código JavaScript<br>
+&lt/SCRIPT>
+</b>
+<p>
+Aunque se puede agregar el número de versión junto a la palabra "JavaScript" (1.0, 1.1 ó 1.2), 
+no se suele aclarar, dejando la libertad al browser de que interprete el código como si 
+estuviese escrito para él.<br><br>
+Bien: ya sabes cómo y dónde agregar los programas JavaScript en tu página web.<br> 
+¿Estás listo para comenzar a programar?<br><br>
+<center><a href="primero.htm">Mi primer JavaScript...</a>
+<p><center><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center> 
+

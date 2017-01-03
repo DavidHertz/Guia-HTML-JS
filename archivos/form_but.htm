@@ -1,0 +1,312 @@
+<html>
+<head>
+<title>JavaScript</title>
+<script language="Javascript">
+function texto(){
+mensaje=document.formulario1.cajatexto.value;
+alert("Hola, "+mensaje);
+}
+function botones(){
+mensaje=document.formulario2.cajatexto2.value;
+alert("Haz escrito: "+mensaje);
+}
+function correcto(){
+alert("¡Muy bien, acertaste!");
+}
+function incorrecto(){
+alert("¡Noo, repasa un poco de geografía!");
+}
+</script>
+</head>
+
+<body><body background="fondo.jpg" bgproperties=fixed>
+<font face=verdana><blockquote>
+<center>
+<h3><font color="blue">Formularios y botones</h3></font>
+</center>
+Contestar una <b>encuesta</b>, crear un <b>acertijo</b>, pedir <b>datos personales</b> o 
+simplemente hacer <b>nuevos amigos</b>. Un formulario puede usarse para eso y 
+para algunas cosas más que sólo tu imaginación conoce. Su capacidad 
+interactiva lo hacen una excelente vía de comunicación para que los 
+visitantes de tu sitio lleguen a tí.
+<p>
+Es un área de tu página que se construye con cuadros de textos, 
+casillas para ingresar datos y botones en varios formatos. Cada uno de 
+esos elementos servirán para que los visitantes de tu página <b>ingresen 
+datos</b>.
+<p>
+Pero antes de empezar, hay que aclarar que los formularios no se crean 
+con JavaScript, sino con HTML (Hyper Text Mark Up Languaje) usando 
+ciertas <b>etiquetas y atributos especiales</b> que conocerás en esta guia. 
+Pero con JavaScript sumarás interactividad a tus formularios.
+<p>
+¿Por qué JavaScript enriquece los formularios creados con HTML? Básicamente, 
+porque considera a cada uno de <b>sus elementos como un objeto</b> (cliquea 
+<a onClick="window.open('imagen10.htm','popup','width=520 height=325')">
+<font style=cursor:hand color=blue><u>aqui</u></font></a> para 
+ver un gráfico donde verás esta relación). Entonces, con algo de ingenio, podrás 
+<b>agregar acción</b> a cada uno de esos elementos del formulario para que hagan tareas 
+específicas. Pero antes, hay que saber cómo crear un formulario en HTML. Sigue 
+leyendo para hacerlo.
+<p>
+<center>
+<h3><font color="blue"><a name=diseño>Diseñando un formulario</h3></font>
+</center>
+En <b>HTML</b>, un formulario se crea con las etiquetas <b>&ltFORM></b> y <b>&lt/FORM></b> que se ubican dentro 
+del cuerpo (<b>&ltBODY></b>) de la página. Dentro de esos "<b>tags</b>" se agregan todo tipo de elementos, 
+como tablas (<b>&ltTABLE></b>) e imágenes (<b>&ltIMG></b>). Pero, especialmente, los diversos objetos para que 
+los navegantes ingresen datos. Estos elementos se crean con la etiqueta <b>&ltINPUT></b>.
+<p>
+El formulario posee <b>atributos imprescindibles</b> para funcionar:
+<p>
+<b><font color=00ff00>NAME</b></font>: Lo identifica y sirve para llamarlo en las funciones 
+JavaScript que lo afecten.
+<p>
+<b><font color=00ff00>METHOD</b></font>: Define cómo la información del formulario será 
+enviada al servidor, para lo cual recibe el valor "<b>Post</b>". Ejemplo:
+<p>
+<center><b>&ltFORM NAME="MiForm" <font color=red>METHOD=post</font>></b></center>
+<p>
+<b><font color=00ff00>ACTION</b></font>: Indica el lugar donde serán enviados los datos 
+del formulario. En general se usa una dirección de correo. Por ejemplo:
+<p><center>
+<b>&ltFORM <font color=red>ACTION=</font><font color=blue>"mailto:hazek_dk@hotmail.com"</font>></b> 
+(hacia tu e-mail).
+<p></center>
+Aquí aparece <b>un inconveniente: según el browser</b> que use el usuario, los datos del formulario 
+pueden llegar a tu casilla de manera confusa, donde nombres, direcciones y teléfonos aparecen 
+mezclados y difíciles de leer. 
+<p>
+<b><font color=00ff00>ENCTYPE</b></font>:Precisa el formato que tomarán los datos almacenados 
+por cada uno de los elementos del formulario, y recibe el valor "<b>TEXT/PLAIN</b>", que es el formato 
+básico de texto. Por ejemplo:
+<p>
+<b>FORM<font color=red> ENCTYPE=</font><font color=blue>"text/plain"</b></font>>
+<p>
+Con estos atributos, la sintaxis para crear un formulario es:
+<b><p>
+&ltBODY>
+<p>
+&ltFORM NAME="MiForm" METHOD=post ACTION="mailto:hazek_dk@hotmail.com@hotmail.com" ENCTYPE="text/plain">
+<p>
+&ltelementos del formulario....>
+<p>
+&lt/FORM>
+<p>
+&lt/BODY>
+<p></b>
+Entre estos códigos HTML y el lenguaje JavaScript hay mucha cercanía. Para JavaScript la etiqueta 
+<b>&ltFORM></b> es el <b>objeto Form</b>, y los diferentes <b>atributos HTML</b> nombrados son <b>propiedades</b> de ese objeto. 
+Por lo tanto, es fácil crear funciones JavaScript que hagan referencia al formulario y sus 
+distintos elementos simplemente siguiendo la idea de "<b>objeto.propiedad</b>" en la que se basa el 
+lenguaje (por ejemplo: <font color=red><b>form.</font><font color=blue>action=resultado</b></font>). 
+<p>
+Sigue leyendo para aprender a crear los primeros objetos del formulario y hacerlos interactuar 
+con JavaScript.
+<p>
+<center>
+<h3><font color="blue"><a name=cuadro>Como crear cuadros de texto</h3></font>
+</center>
+Los cuadros de texto son los <b>ingredientes básicos</b> para crear un formulario. Cómo el resto de los 
+objetos usados para recibir datos, se crean con la etiqueta <b>&ltINPUT></b>, seguida de estos <b>atributos</b> 
+que indican su tipo y su forma. 
+<p>
+<b><font color=00ff00>TYPE</font></b>: Define qué <b>clase de objeto</b> se creará en el formulario. En 
+el caso de una caja de texto, debe recibir el valor "<b>Text</b>".
+<p>
+<b><font color=00ff00>NAME</font></b>: Identifica al objeto. Para hacerlo conviene usar un 
+nombre que refiera al tipo de información que recibirá, por ejemplo: <b>Nombre" o "País</b>", para que 
+pueda leerse sin problemas al recibirla.
+<p>
+<b><font color=00ff00>SIZE</font></b>: Otorga la <b>medida</b> (en pixels) de la caja del texto. Si no 
+se define, el browser presenta el cuadro en <b>tamaño 20</b>. 
+<p>
+<b><font color=00ff00>VALUE</font></b>: En el caso de un objeto "<b>Text</b>", el value muestra un 
+mensaje en el cuadro, que el usuario borrará para ingresar los datos pedidos.
+<p>
+Usando todos estos atributos, un cuadro de texto se crea así:
+<p><b>
+&ltFORM NAME="MiForm" METHOD ....>
+<p>
+&ltINPUT <font color=red>TYPE</font>="text" <font color=red>NAME</font>="nombre" 
+<font color=red>VALUE</font>="¿Cómo te llamas?" <font color=red>SIZE</font>=30>
+<p>
+</FORM>
+<p></b>
+Y el resultado es: 
+<p>
+<INPUT TYPE="text" NAME="nombre" VALUE="¿Cómo te llamas?" SIZE=30>
+<p>
+Cada elemento del formulario y sus atributos son entendidos por JavaScript como objetos y 
+propiedades, respectivamente. Así, puedes crear scripts con funciones relacionadas a uno o 
+varios objetos del formulario. Prueba este ejemplo:
+<p>
+<form name="formulario1">
+<p><b><font size="2" face="Verdana">Ingresa tu nombre y presiona ENTER</font></b> 
+<input type="text" name="cajatexto" value="" onBlur=texto()>
+</form>
+<p>
+El script reconoce el contenido del cuadro de texto y lo muestra en forma de saludo en un cuadro 
+tipo "<b>Alert</b>". Fíjate en el código de la imagen para saber cómo hacerlo.
+<p>
+Lo primero es crear el formulario (llamado "<b>formulario1</b>") con el cuadro de texto (<b>cajatexto</b>). 
+Luego, se define una función con una variable (<b>mensaje</b>) que guarda el contenido (<b>value</b>) del 
+objeto "<b>text</b>". Se le añade (+) a la palabra "<b>Hola</b>" para que se añada el texto a la funcion <b>Alert</b>.
+<p>
+<center><img src="adivina.gif"><br>
+<a onClick="window.open('imagen11.htm','popup','width=520 height=325')">
+<font face="Fixedsys" style=cursor:hand color=blue><u>Ampliar</u></font></center>
+<p>
+La función se activa desde el evento "<b>onClick</b>", asignado al botón "<b>Respuesta</b>".
+<p>
+Para aprender a crear botones y usarlos junto a los cuadros de texto, sigue leyendo.
+<p>
+<center>
+<h3><font color="blue"><a name=boton>Con sólo un boton</h3></font>
+</center>
+Hay <b>tres tipos de botones</b> que puedes incluir en tus formularios. Sólo coloca el valor deseado en 
+el atributo <b>TYPE</b> de la etiqueta <b>&ltINPUT></b>.
+<p>
+<b><font color=00FF00>SUBMIT</font></b>: Crea un botón que envía automáticamente el formulario 
+al destino definido en el "<b>tag</b>" <b>METHOD</b> del objeto <b>&ltFORM></b>.
+<p>
+<b><font color=00FF00>RESET</font></b>: Crea un botón que borra o vuelve a su estado inicial 
+todos los elementos del formulario.
+<p>
+<b><font color=00FF00>BUTTON</font></b>: Define un botón <b>libre</b>, capaz de realizar una función 
+específica programada en JavaScript.
+<p>
+Los botones también reciben los atributos <b>NAME</b> (para identificarlos) y <b>VALUE</b> que representa la 
+palabra que el botón mostrará. 
+<p>
+Prueba el siguiente script para ver cómo actuan los botones "<b>Reset</b>" y "<b>Button</b>" junto a una caja 
+de texto. 
+<p>
+Escribe lo que quieras y prueba los botones
+<p>
+<form name="formulario2">
+<p><b><font size="2" face="Verdana">Escribe lo que quieras y prueba los botones</font></b></p>
+<p>
+<input type="text" name="cajatexto2" value="" size=40>
+<br>
+<p><input type="button" value="Comprobar ingreso" onClick="botones()">
+<input type="reset" value="Borrar">
+</form>
+<p>
+El código es simple: fíjate.
+<p>
+ En este caso, se diseña un formulario (<b>formulario2</b>) con un cuadro de texto (<b>cajatexto2</b>) y un 
+botón del tipo "<b>Button</b>" y otro "<b>Reset</b>". La variable "<b>mensaje</b>" de la función "<b>botones()</b>" se 
+encarga de guardar el contenido (<b>value</b>) del objeto "<b>text</b>" y de mostrarlo en una ventana del tipo 
+"<b>Alert</b>".
+<p>
+<center><img src="hazwrite.gif"><br>
+<a onClick="window.open('imagen12.htm','popup','width=520 height=370')">
+<font face="Fixedsys" style=cursor:hand color=blue><u>Ampliar</u></font></center>
+<p>
+Luego, la función es convocada por el evento "<b>onClick</b>" del botón "<b>Comprobar ingreso</b>". Observa 
+que el botón "<b>Borrar</b>" elimina el texto escrito en el cuadro sin ninguna codificación porque es 
+un objeto de tipo Reset, y ya lleva implícita esa función.
+<p>
+Sigue leyendo para aprender a trabajar con las casillas de verificación y los botones de radio.
+<p>
+<center>
+<h3><font color="blue"><a name=encasilles>Para que no te encasilles</h3></font>
+</center>
+Las <b>casillas de verificación</b> y los <b>botones de radio</b> trabajan en el contexto de un grupo, 
+mostrándose como varias opciones posibles frente a una consulta. Pero tienen un diferencia 
+clave. Las <b>casillas</b> se usan en preguntas que tienen <b>más de una alternativa</b> como respuesta, 
+mientras que los <b>botones de radio</b> permiten optar por una <b>única opción</b>.
+<p>
+Para crear <b>casillas</b> hay que poner "<b>Checkbox</b>" en el atributo <b>TYPE</b> de la etiqueta <b>&ltINPUT></b> y para 
+los botones, la palabra "<b>Radio</b>".
+<p>
+Anbos objetos tiene los atributos <b>NAME</b> y <b>VALUE</b> pero, según el caso, estas 
+características se usan de maneras distintas. El siguiente código crea tres casillas referidas 
+a gustos musicales:
+<p>
+<b>
+&ltFORM>
+<p>
+¿Qué tipo de música te gusta?
+<p>
+&ltINPUT TYPE="checkbox" NAME="rock" VALUE="si">Rock
+<p>
+&ltbr> &ltINPUT TYPE="checkbox" NAME="dance" VALUE="si">Dance 
+<p>
+&ltbr> &ltINPUT TYPE="checkbox" NAME="pop" VALUE="si">Pop
+<p>
+&lt/FORM>
+</b><p>
+En tu navegador se verá así:
+<p>
+<FORM>
+¿Qué tipo de música te gusta?
+<br>
+<br><INPUT TYPE="checkbox" NAME="rock" VALUE="si">Rock
+<br> <INPUT TYPE="checkbox" NAME="dance" VALUE="si">Dance 
+<br> <INPUT TYPE="checkbox" NAME="pop" VALUE="si">Pop
+</FORM>
+<p>
+Los atributos <b>NAME</b> de las casillas se corresponden a cada elección, mientras que los <b>VALUE</b> son 
+iguales. Así se facilita la lectura de los resultados del formulario al recibirlos, en los que 
+podrás ver directamente "<b>rock=si</b>" y "<b>pop=si</b>", por ejemplo. Para lograr esa facilidad con los 
+botones de radio, procede a la inversa. Observa el siguiente código:
+<p><b>
+<FORM>
+¿Qué edad tienes?
+<p>
+&ltINPUT TYPE="radio" NAME="edad" VALUE="10a20">Entre 10 y 20
+<p>
+&ltbr> &ltINPUT TYPE="radio" NAME="edad" VALUE="21a40">De 21 a 40 
+<p>
+&ltbr> &ltINPUT TYPE="radio" NAME="edad" VALUE="41a99">De 41 a 99
+<p>
+&lt/FORM>
+<p></b>
+Y asi se verá:
+<p>
+<FORM>
+¿Qué edad tienes?
+<br>
+<br><INPUT TYPE="radio" NAME="edad" VALUE="10a20">Entre 10 y 20
+<br><INPUT TYPE="radio" NAME="edad" VALUE="21a40">De 21 a 40 
+<br><INPUT TYPE="radio" NAME="edad" VALUE="41a99">De 41 a 99
+</FORM>
+<p>
+Aquí, <b>NAME</b> se repite y es <b>VALUE</b> el que cambia para establecer la edad. Los resultados del 
+formulario se verán, por ejemplo, así: "<b>edad=21 a 40</b>". Fácil, ¿no?
+<p>
+Fíjate ahora cómo relacionar una función JavaScript con estos elementos.
+<p>
+<form name="formulario4">
+        <b><font size="2" face="Verdana">¿Cu&aacute;l 
+        es la ciudad capital de Brasil?</font></b> <br>
+        <input type="radio" name="ciudad" value="Rio" onClick="incorrecto()">
+        <font face="Verdana" size="2">Rio de Janeiro</font> 
+        <br>
+        <input type="radio" name="ciudad" value="Brasilia" onClick="correcto()">
+        <font size="2" face="Verdana">Brasilia </font><br>
+        <input type="radio" name="ciudad" value="SanPablo" onClick="incorrecto()">
+        <font face="Verdana" size="2">San Pablo 
+        </font> 
+      </form>
+<p>
+¿Acertaste? Bien, ahora revisa el código para aprender a hacerlo con tus propios ejemplos.
+<p>
+Lo primero es crear los diferentes botones de radio, dándoles el mismo <b>NAME</b> ("<b>ciudad</b>"), pero 
+diferentes <b>VALUE</b> para diferenciarlos. Luego, los eventos "<b>onClick</b>" de cada uno evocan a las 
+funciones JavaScript creadas. En caso de hacer click sobre "<b>Brasilia</b>", se activa la función 
+"<b>correcto()</b>", mientras que si se elije alguna de las otras dos ciudades, se pone en acción 
+"<b>incorrecto()</b>".
+<p>
+<center><img src="check.gif"><br>
+<a onClick="window.open('imagen13.htm','popup','width=520 height=398')">
+<font face="Fixedsys" style=cursor:hand color=blue><u>Ampliar</u></font></center>
+<p>
+<center>
+<a href="controladores.htm">Controladores de eventos...</a>
+<p><font color=black><small>Copyright© 2002 Hazek Web Site®</small></font></center> 
+
+
+
